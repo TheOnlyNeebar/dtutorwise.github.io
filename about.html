@@ -3,63 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Us | TutorWise Brampton</title>
-  <meta name="description" content="Learn more about TutorWise, Brampton's trusted tutoring company dedicated to helping students succeed through personalized support and expert teaching." />
-  <meta name="keywords" content="about TutorWise, tutoring in Brampton, private tutoring, personalized tutoring, education support, experienced tutors" />
+  <title>About TutorWise | Brampton Tutoring Experts</title>
+  <meta name="description" content="Learn about TutorWise — a Brampton-based tutoring company offering K–12 support, IEP & ESL help, and proven academic success. Online and in-person tutoring available." />
+  <meta name="keywords" content="about TutorWise, Brampton tutoring, one-on-one tutoring, academic tutoring, licensed tutors, summer learning, ESL support, IEP tutoring" />
   <meta name="author" content="TutorWise" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
       background: #f0f4f8;
       color: #333;
       padding: 20px;
       max-width: 900px;
       margin: auto;
     }
+
+    /* Navigation */
     nav ul {
-      list-style:none;
-      display:flex;
-      gap:20px;
-      padding:10px;
-      background:#1e90ff;
-      align-items:center;
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 15px 30px;
+      background: #254592;
     }
-    nav ul li a {
-      color:white;
-      text-decoration:none;
-      font-weight:bold;
+
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
       padding: 6px 12px;
       border-radius: 4px;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
     }
-    nav ul li a:hover {
-      background-color: #0c62d1;
+
+    .nav-link:hover {
+      background-color: #1e2d6b;
     }
+
+    .nav-link[href="about.html"]:hover {
+      transform: scale(1.2);
+      font-size: 1.1rem;
+    }
+
+    /* Header */
     header {
-      background-color: #1e90ff;
-      color: white;
-      padding: 20px 0;
+      background-color: #254592;
+      color: #c1ff72;
+      padding: 40px 0;
       text-align: center;
       border-radius: 8px;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
     }
+
+    header h1 {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 3rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #f0f4f8;
+    }
+
     section {
       background: white;
-      padding: 20px 30px;
+      padding: 40px 50px;
       border-radius: 8px;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
+
     section h2 {
-      color: #1e90ff;
+      color: #254592;
       margin-bottom: 15px;
     }
+
+    section ul {
+      margin-left: 20px;
+      padding-top: 10px;
+    }
+
     footer {
       text-align: center;
       color: #777;
@@ -67,19 +103,30 @@
       margin-top: 40px;
       padding-bottom: 20px;
     }
+
     footer a {
-      color: #1e90ff;
+      color: #254592;
       text-decoration: none;
       margin: 0 10px;
       font-weight: bold;
     }
+
     footer a:hover {
       text-decoration: underline;
     }
+
     @media (max-width: 600px) {
       nav ul {
         flex-direction: column;
         gap: 10px;
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      section {
+        padding: 30px 20px;
       }
     }
   </style>
@@ -89,37 +136,70 @@
   <!-- Navigation -->
   <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="testimonials.html">Testimonials</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="https://facebook.com/YourTutorWisePage" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li>
+        <a href="https://facebook.com/YourTutorWisePage" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="width:24px; height:24px; filter:invert(1);" />
+        </a>
+      </li>
     </ul>
   </nav>
 
-  <!-- Page Header -->
+  <!-- Header -->
   <header>
-    <h1>About TutorWise</h1>
-    <p>Meet the Team Behind Brampton's Most Trusted Tutoring Service</p>
+    <h1><span class="logo-title">TUTORWISE</span></h1>
+    <p>Unlocking the Path to Academic Success</p>
   </header>
 
   <!-- About Section -->
+ <!-- [previous content remains unchanged up to here] -->
+
+  <!-- About Section -->
   <section>
-    <h2>Our Mission</h2>
+    <h2>About Us</h2>
     <p>
-      At TutorWise, we believe every student deserves a learning experience that fits their pace, personality, and potential. Founded in Brampton, our mission is to deliver academic excellence through compassion, strategy, and support.
+      At TutorWise, we are dedicated to helping students thrive academically through structured, personalized, and professional tutoring services. Serving students from Kindergarten to Grade 12, we offer support in all core subjects, with a strong focus on results and growth.
     </p>
-    <br />
-    <h2>Why Choose Us?</h2>
-    <p>
-      Our lead tutor brings years of classroom and private tutoring experience, specializing in high school math, science, and English. We focus on creating personalized lesson plans that match curriculum standards while boosting confidence and motivation.
+    <p style="margin-top: 15px;">
+      Whether you’re looking for help with daily homework, transitioning from applied to academic courses, or preparing for final exams — our licensed tutors are here to guide you every step of the way.
     </p>
-    <br />
-    <h2>Who We Serve</h2>
-    <p>
-      We help students from Grades 3 to 12 across Brampton and the surrounding area. Whether you're looking to build foundational skills, prepare for tests, or catch up after falling behind — we're here to support you.
-    </p>
+
+    <!-- CTA Button -->
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="services.html" style="
+        display: inline-block;
+        background-color: #254592;
+        color: #c1ff72;
+        font-weight: bold;
+        padding: 14px 30px;
+        font-size: 1.1rem;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;">
+        Explore Our Services
+      </a>
+    </div>
+  </section>
+
+  </section>
+
+  <!-- What We Offer -->
+  <section>
+    <h2>Why Families Choose TutorWise</h2>
+    <ul>
+      <li>✅ One-on-one tutoring in all subjects, K–12</li>
+      <li>✅ Online or in-person learning options</li>
+      <li>✅ Dedicated support for IEP and ESL students</li>
+      <li>✅ Affordable pricing and flexible scheduling</li>
+      <li>✅ Proven academic improvement and results</li>
+      <li>✅ Transition support from applied to academic courses</li>
+      <li>✅ Exam and test preparation programs</li>
+      <li>✅ Accelerated Summer Learning Program</li>
+    </ul>
   </section>
 
   <!-- Footer -->
