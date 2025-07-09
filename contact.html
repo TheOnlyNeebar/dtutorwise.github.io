@@ -45,17 +45,17 @@
     }
 
     .nav-link:hover {
-      background-color: #1e2d6b;
-    }
+     /* Apply hover grow effect to all nav items */
+      .grow-hover:hover {
+        transform: scale(1.2);
+        font-size: 1.1rem;
+}
 
-    header {
-      background-color: #254592;
-      color: #c1ff72;
-      padding: 40px 0;
-      text-align: center;
-      border-radius: 8px;
-      margin-bottom: 50px;
-    }
+/* Facebook icon hover effect */
+nav ul li a:hover img {
+  transform: scale(1.2);
+}
+
 
     header h1 {
       font-family: 'Permanent Marker', cursive;
