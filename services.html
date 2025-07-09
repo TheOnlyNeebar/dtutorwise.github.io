@@ -3,12 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Our Services | TutorWise Tutoring in Brampton</title>
-  <meta name="description" content="Explore the personalized tutoring services offered by TutorWise, including K–12 subject help, ESL & IEP support, exam prep, and summer learning programs." />
-  <meta name="keywords" content="tutoring services, Brampton tutoring, exam prep, ESL tutor, IEP tutoring, one-on-one tutoring, summer learning, applied to academic transition" />
+  <title>Our Services | TutorWise Brampton Tutoring</title>
+  <meta name="description" content="Discover TutorWise's personalized tutoring services for K–12 students in Brampton. ESL, IEP, exam prep, and more with experienced licensed tutors." />
+  <meta name="keywords" content="tutoring brampton, K-12 tutoring, one-on-one tutor, ESL support, IEP tutor, exam prep, academic tutoring, applied to academic, summer tutoring" />
   <meta name="author" content="TutorWise" />
-
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 
   <style>
@@ -46,17 +44,14 @@
       transition: all 0.3s ease;
     }
 
-    .nav-link:hover {
-      /* Apply hover grow effect to all nav items */
-.grow-hover:hover {
-  transform: scale(1.2);
-  font-size: 1.1rem;
-}
+    .grow-hover:hover {
+      transform: scale(1.2);
+      font-size: 1.1rem;
+    }
 
-/* Facebook icon hover effect */
-nav ul li a:hover img {
-  transform: scale(1.2);
-}
+    nav ul li a:hover img {
+      transform: scale(1.2);
+    }
 
     header {
       background-color: #254592;
@@ -70,7 +65,6 @@ nav ul li a:hover img {
     header h1 {
       font-family: 'Permanent Marker', cursive;
       font-size: 3rem;
-      letter-spacing: 1px;
       text-transform: uppercase;
     }
 
@@ -89,29 +83,30 @@ nav ul li a:hover img {
 
     section h2 {
       color: #254592;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+      font-size: 2rem;
     }
 
-    section ul {
-      margin-left: 20px;
-      padding-top: 10px;
+    .service-item {
+      margin-bottom: 30px;
     }
 
-    .cta-button {
-      display: inline-block;
-      background-color: #254592;
-      color: #c1ff72;
-      font-weight: bold;
-      padding: 14px 30px;
-      font-size: 1.1rem;
-      text-decoration: none;
-      border-radius: 8px;
-      margin-top: 30px;
-      transition: background-color 0.3s ease;
+    .service-item h3::before {
+      content: "🖍️ ";
+      color: #254592;
+      margin-right: 5px;
     }
 
-    .cta-button:hover {
-      background-color: #1e2d6b;
+    .service-item h3 {
+      color: #254592;
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .service-item p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #333;
     }
 
     footer {
@@ -152,56 +147,86 @@ nav ul li a:hover img {
 <body>
 
   <!-- Navigation -->
- <nav>
-  <ul>
-    <li><a href="index.html" class="nav-link grow-hover">Home</a></li>
-    <li><a href="services.html" class="nav-link grow-hover">Services</a></li>
-    <li><a href="about.html" class="nav-link grow-hover">About</a></li>
-    <li><a href="contact.html" class="nav-link grow-hover">Contact</a></li>
-    <li>
-      <a href="https://facebook.com/YourTutorWisePage" target="_blank" rel="noopener" aria-label="Facebook"
-         style="display: inline-flex; align-items: center; justify-content: center;
-                width: 36px; height: 36px; border-radius: 50%;
-                background-color: #1e2d6b; transition: transform 0.3s ease;">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
-             alt="Facebook" style="width:18px; height:18px; filter: invert(1);" />
-      </a>
-    </li>
-  </ul>
-</nav>
-
+  <nav>
+    <ul>
+      <li><a href="index.html" class="nav-link grow-hover">Home</a></li>
+      <li><a href="services.html" class="nav-link grow-hover">Services</a></li>
+      <li><a href="about.html" class="nav-link grow-hover">About</a></li>
+      <li><a href="contact.html" class="nav-link grow-hover">Contact</a></li>
+      <li>
+        <a href="https://facebook.com/YourTutorWisePage" target="_blank" rel="noopener" aria-label="Facebook"
+           style="display: inline-flex; align-items: center; justify-content: center;
+                  width: 36px; height: 36px; border-radius: 50%;
+                  background-color: #1e2d6b; transition: transform 0.3s ease;">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
+               alt="Facebook" style="width:18px; height:18px; filter: invert(1);" />
+        </a>
+      </li>
+    </ul>
+  </nav>
 
   <!-- Header -->
   <header>
     <h1>TUTORWISE</h1>
-    <p>Explore Our Tutoring Services</p>
+    <p>Our Tutoring Services</p>
   </header>
 
   <!-- Services Section -->
   <section>
     <h2>What We Offer</h2>
-    <ul>
-      <li>✅ Personalized one-on-one tutoring for all K–12 grades</li>
-      <li>✅ In-person or online sessions based on your preference</li>
-      <li>✅ Subject support in Math, Science, English, and more</li>
-      <li>✅ IEP and ESL student support tailored to individual needs</li>
-      <li>✅ Exam and test preparation strategies for success</li>
-      <li>✅ Transition guidance from Applied to Academic streams</li>
-      <li>✅ Summer Accelerated Learning Programs</li>
-      <li>✅ Affordable, flexible pricing with no long-term contracts</li>
-    </ul>
 
-    <div style="text-align: center;">
-      <a href="contact.html" class="cta-button">Contact Us for a Free Consultation</a>
+    <div class="service-item">
+      <h3>K–12 Tutoring (All Subjects)</h3>
+      <p>We provide support in Math, Science, English, and more. Whether your child is catching up or aiming ahead, our tutors are ready to help at every level.</p>
+    </div>
+
+    <div class="service-item">
+      <h3>Online or In-Person Sessions</h3>
+      <p>Choose flexible tutoring based on your family's schedule. We offer professional support from the comfort of your home or at our Brampton center.</p>
+    </div>
+
+    <div class="service-item">
+      <h3>Dedicated Support for IEP and ESL Students</h3>
+      <p>Our tutors are trained to help students with Individualized Education Plans and English as a Second Language needs, ensuring tailored learning experiences.</p>
+    </div>
+
+    <div class="service-item">
+      <h3>Transition from Applied to Academic Courses</h3>
+      <p>We specialize in helping students successfully bridge the gap from applied to academic programs with confidence and preparation.</p>
+    </div>
+
+    <div class="service-item">
+      <h3>Personalized One-on-One Attention</h3>
+      <p>Our tutors work with students individually to address their strengths, challenges, and learning goals in every session.</p>
+    </div>
+
+    <div class="service-item">
+      <h3>Experienced and Licensed Tutors</h3>
+      <p>Our team is made up of certified, professional tutors who are passionate about helping students thrive academically and personally.</p>
+    </div>
+
+    <div class="service-item">
+      <h3>Exam and Test Preparation</h3>
+      <p>Get ready for high-stakes tests with focused prep sessions covering content, strategy, and confidence-building for better performance.</p>
+    </div>
+
+    <div class="service-item">
+      <h3>Summer Accelerated Learning Program</h3>
+      <p>Stay sharp over the summer with our intensive learning plans that prepare students for the next grade and beyond.</p>
+    </div>
+
+    <div class="service-item">
+      <h3>Affordable Pricing</h3>
+      <p>We believe every family deserves access to quality education. That’s why we offer competitive rates without compromising quality.</p>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
     &copy; 2025 TutorWise. All rights reserved.<br />
-    <a href="https://facebook.com/YourTutorWisePage" target="_blank" rel="noopener">Facebook</a>
-    <a href="https://instagram.com/YourTutorWisePage" target="_blank" rel="noopener">Instagram</a>
-    <a href="https://twitter.com/YourTutorWisePage" target="_blank" rel="noopener">Twitter</a>
+    <a href="https://facebook.com/YourTutorWisePage" target="_blank">Facebook</a>
+    <a href="https://instagram.com/YourTutorWisePage" target="_blank">Instagram</a>
+    <a href="https://twitter.com/YourTutorWisePage" target="_blank">Twitter</a>
   </footer>
 
 </body>
