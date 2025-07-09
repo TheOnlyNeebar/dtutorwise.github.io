@@ -7,8 +7,6 @@
   <meta name="description" content="Contact TutorWise for personalized K–12 tutoring in Brampton. Book a free consultation today. In-person and online tutoring options available." />
   <meta name="keywords" content="contact TutorWise, tutoring Brampton, tutor near me, book tutoring session, K–12 tutoring, summer tutoring" />
   <meta name="author" content="TutorWise" />
-
-  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 
   <style>
@@ -50,11 +48,6 @@
       background-color: #1e2d6b;
     }
 
-    .nav-link[href="contact.html"]:hover {
-      transform: scale(1.2);
-      font-size: 1.1rem;
-    }
-
     header {
       background-color: #254592;
       color: #c1ff72;
@@ -70,11 +63,6 @@
       text-transform: uppercase;
     }
 
-    header p {
-      font-size: 1.2rem;
-      color: #f0f4f8;
-    }
-
     section {
       background: white;
       padding: 40px 50px;
@@ -85,7 +73,7 @@
 
     section h2 {
       color: #254592;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     .contact-details {
@@ -108,6 +96,41 @@
 
     .cta-button:hover {
       background-color: #1e2d6b;
+    }
+
+    form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    input[type="submit"] {
+      background-color: #254592;
+      color: #c1ff72;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #1e2d6b;
+    }
+
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 300px;
+      margin-top: 30px;
+      border-radius: 8px;
     }
 
     footer {
@@ -168,28 +191,38 @@
     <p>Get in Touch With Us</p>
   </header>
 
-  <!-- Contact Section -->
+  <!-- Contact Info -->
   <section>
     <h2>Contact Us</h2>
     <div class="contact-details">
-      Email: <a href="mailto:yourtutorwise@email.com">tutoringnim@gmail.com</a><br />
-      Location: 14 Automatic Road, Brampton, Ontario, L6P 5N5<br />
-      Hours: Monday–Friday, 3pm – 8pm (Evening sessions available)<br />
+      📧 Email: <a href="mailto:23anissa.neebar@gmail.com">23anissa.neebar@gmail.com</a><br />
+      📍 Location: Brampton, Ontario<br />
     </div>
 
-    <div style="text-align: center;">
-      <a href="mailto:yourtutorwise@email.com" class="cta-button">
-        Email Us to Book a Free Consultation
-      </a>
-    </div>
+    <!-- Contact Form -->
+    <form action="https://formspree.io/f/myzjqqle" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Phone Number" />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Send Message" />
+    </form>
+
+    <!-- Google Maps -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.6673949070145!2d-79.7672323!3d43.7315475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b14fdf7346dd9%3A0xf5579a79f0d4f1c4!2sBrampton%2C%20ON!5e0!3m2!1sen!2sca!4v1720530587641!5m2!1sen!2sca"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
   </section>
 
   <!-- Footer -->
   <footer>
     &copy; 2025 TutorWise. All rights reserved.<br />
-    <a href="https://facebook.com/YourTutorWisePage" target="_blank" rel="noopener">Facebook</a>
-    <a href="https://instagram.com/YourTutorWisePage" target="_blank" rel="noopener">Instagram</a>
-    <a href="https://twitter.com/YourTutorWisePage" target="_blank" rel="noopener">Twitter</a>
+    <a href="https://facebook.com/YourTutorWisePage" target="_blank">Facebook</a>
+    <a href="https://instagram.com/YourTutorWisePage" target="_blank">Instagram</a>
+    <a href="https://twitter.com/YourTutorWisePage" target="_blank">Twitter</a>
   </footer>
 
 </body>
