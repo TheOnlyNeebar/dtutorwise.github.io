@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home | TutorWise Tutoring in Brampton</title>
-  <meta name="description" content="TutorWise offers personalized one-on-one tutoring for students K–12 in Brampton. Online and in-person options available with licensed, results-driven tutors." />
-  <meta name="keywords" content="tutoring brampton, tutor near me, K-12 tutoring, one-on-one tutoring, ESL support, IEP tutoring, online tutoring, in-person tutoring" />
+  <title>TutorWise | Brampton Tutoring Services</title>
+  <meta name="description" content="TutorWise offers in-person and online tutoring in Brampton for K–12 students. Personalized, licensed support for all subjects and needs." />
+  <meta name="keywords" content="brampton tutoring, tutorwise, tutoring near me, online tutoring, math tutor, science tutor, K-12 help, ESL tutoring" />
   <meta name="author" content="TutorWise" />
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 
@@ -21,7 +21,7 @@
       background: #f0f4f8;
       color: #333;
       padding: 20px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
     }
 
@@ -44,13 +44,12 @@
       transition: all 0.3s ease;
     }
 
-    /* Grow effect on hover for all nav links */
     .grow-hover:hover {
       transform: scale(1.2);
       font-size: 1.1rem;
+      background-color: #1e2d6b;
     }
 
-    /* Facebook icon hover scaling */
     nav ul li a:hover img {
       transform: scale(1.2);
     }
@@ -67,7 +66,6 @@
     header h1 {
       font-family: 'Permanent Marker', cursive;
       font-size: 3rem;
-      letter-spacing: 1px;
       text-transform: uppercase;
     }
 
@@ -86,12 +84,57 @@
 
     section h2 {
       color: #254592;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+      font-size: 2rem;
     }
 
     section p {
       font-size: 1.1rem;
       line-height: 1.6;
+    }
+
+    .call-button {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #254592;
+      color: #c1ff72;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .call-button:hover {
+      background-color: #1e2d6b;
+    }
+
+    input, textarea {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    input[type="submit"] {
+      background-color: #254592;
+      color: #c1ff72;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #1e2d6b;
+    }
+
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 300px;
+      margin-top: 30px;
+      border-radius: 8px;
     }
 
     footer {
@@ -129,42 +172,6 @@
     }
   </style>
 </head>
-<!-- Contact Section on Home Page -->
-<section id="contact-home">
-  <h2 style="color:#254592; margin-bottom: 20px;">Get in Touch</h2>
-
-  <div class="contact-details" style="line-height: 2; font-size: 1.1rem; margin-bottom: 30px;">
-    📍 Address: 14 Automatic Rd, Brampton, ON L6S 5N5<br />
-    📞 Phone: <a href="tel:6476778767">647-677-8767</a><br />
-    📧 Email: <a href="mailto:tutoringnim@gmail.com">tutoringnim@gmail.com</a><br />
-    <a href="tel:6476778767" class="call-button" style="
-      display:inline-block;
-      margin-top:10px;
-      background-color:#254592;
-      color:#c1ff72;
-      padding:10px 18px;
-      border-radius:8px;
-      font-weight:bold;
-      text-decoration:none;
-    ">📞 Call Now</a>
-  </div>
-
-  <!-- Contact Form -->
-  <form action="https://formspree.io/f/myzjqqle" method="POST" style="display:flex; flex-direction:column; gap:15px; margin-bottom: 30px;">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <input type="tel" name="phone" placeholder="Phone Number" />
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <input type="submit" value="Send Message" style="background-color:#254592; color:#c1ff72; font-weight:bold; padding:10px; border:none; border-radius:6px; cursor:pointer;" />
-  </form>
-
-  <!-- Embedded Google Map -->
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.6741571532863!2d-79.72066482336832!3d43.73143324814386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b14fc47c888b3%3A0xb617bd4eb88cf4e!2s14%20Automatic%20Rd%2C%20Brampton%2C%20ON%20L6S%205N5!5e0!3m2!1sen!2sca!4v1720546547681!5m2!1sen!2sca"
-    width="100%" height="300" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</section>
-
 <body>
 
   <!-- Navigation -->
@@ -178,7 +185,7 @@
         <a href="https://facebook.com/YourTutorWisePage" target="_blank" rel="noopener" aria-label="Facebook"
            style="display: inline-flex; align-items: center; justify-content: center;
                   width: 36px; height: 36px; border-radius: 50%;
-                  background-color: #1e2d6b; transition: transform 0.3s ease;">
+                  background-color: transparent; transition: all 0.3s ease;">
           <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
                alt="Facebook" style="width:18px; height:18px; filter: invert(1);" />
         </a>
@@ -189,18 +196,42 @@
   <!-- Header -->
   <header>
     <h1>TUTORWISE</h1>
-    <p>Empowering Students in Brampton — Online & In-Person Tutoring</p>
+    <p>Empowering Students, One Lesson at a Time</p>
   </header>
 
-  <!-- Intro Section -->
+  <!-- Main Section -->
   <section>
     <h2>Welcome to TutorWise</h2>
     <p>
-      At TutorWise, we specialize in personalized, one-on-one tutoring for K–12 students across Brampton and surrounding areas. Whether you're seeking academic support in Math, Science, English, or preparing for exams, our licensed and experienced tutors are here to guide you every step of the way.
+      We specialize in K–12 tutoring in all subjects. Our experienced tutors offer personalized support, especially for IEP and ESL students. Whether you're preparing for exams, transitioning from applied to academic, or just need extra help — we’re here to help your child thrive.
     </p>
-    <p style="margin-top: 20px;">
-      We offer online and in-person sessions, support for IEP and ESL students, and flexible scheduling to fit your family’s needs. Your child’s success is our priority — because when students feel confident, they thrive.
-    </p>
+  </section>
+
+  <!-- Contact Section on Home Page -->
+  <section id="contact-home">
+    <h2 style="color:#254592; margin-bottom: 20px;">Get in Touch</h2>
+
+    <div class="contact-details" style="line-height: 2; font-size: 1.1rem; margin-bottom: 30px;">
+      📍 Address: 14 Automatic Rd, Brampton, ON L6S 5N5<br />
+      📞 Phone: <a href="tel:6476778767">647-677-8767</a><br />
+      📧 Email: <a href="mailto:tutoringnim@gmail.com">tutoringnim@gmail.com</a><br />
+      <a href="tel:6476778767" class="call-button">📞 Call Now</a>
+    </div>
+
+    <!-- Contact Form -->
+    <form action="https://formspree.io/f/myzjqqle" method="POST" style="display:flex; flex-direction:column; gap:15px; margin-bottom: 30px;">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Phone Number" />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Send Message" />
+    </form>
+
+    <!-- Embedded Google Map -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.6741571532863!2d-79.72066482336832!3d43.73143324814386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b14fc47c888b3%3A0xb617bd4eb88cf4e!2s14%20Automatic%20Rd%2C%20Brampton%2C%20ON%20L6S%205N5!5e0!3m2!1sen!2sca!4v1720546547681!5m2!1sen!2sca"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
   </section>
 
   <!-- Footer -->
