@@ -1,148 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
- <title>About | TutorWise</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | TutorWise</title>
   <style>
-  @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-  }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
 
-  nav {
-    background-color: #254592;
-    padding: 10px 20px;
-  }
+    nav {
+      background-color: #254592;
+      padding: 10px 20px;
+    }
 
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-  }
-
-  .nav-links li {
-    position: relative;
-  }
-
-  .nav-link {
-    text-decoration: none;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-  }
-
-  .grow-hover:hover {
-    background-color: #1e2d6b;
-    font-size: 1.1em;
-  }
-
-  .menu-toggle {
-    display: none;
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-  }
-
-  .fb-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-  }
-
-  .fb-icon:hover {
-    background-color: #1e2d6b;
-  }
-
-  .logo a {
-    font-family: 'Permanent Marker', cursive;
-    color: #c1ff72 !important;
-    font-size: 24px;
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background-color 0.3s, font-size 0.3s;
-  }
-
-  .logo a:hover {
-    background-color: #1e2d6b;
-    font-size: 1.1em;
-  }
-
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block;
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     .nav-links {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      margin-top: 10px;
-      background-color: #254592;
-      padding: 10px 0;
-    }
-
-    .nav-links.active {
       display: flex;
+      list-style: none;
+      gap: 20px;
     }
 
     .nav-links li {
-      text-align: center;
-      margin: 10px 0;
+      position: relative;
     }
-  }
-</style>
+
+    .nav-link {
+      text-decoration: none;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .grow-hover:hover {
+      background-color: #1e2d6b;
+      font-size: 1.1em;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .fb-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .fb-icon:hover {
+      background-color: #1e2d6b;
+    }
+
+    .logo a {
+      font-family: 'Permanent Marker', cursive;
+      color: #c1ff72 !important;
+      font-size: 24px;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: background-color 0.3s, font-size 0.3s;
+    }
+
+    .logo a:hover {
+      background-color: #1e2d6b;
+      font-size: 1.1em;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        background-color: #254592;
+        padding: 10px 0;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+      }
+    }
+
+    .main-content {
+      max-width: 960px;
+      margin: 60px auto 40px;
+      padding: 30px 20px 40px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .main-content h1, h2 {
+      color: #254592;
+      text-align: center;
+    }
+
+    .main-content p {
+      padding: 0 10px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .cta-button {
+      display: block;
+      width: fit-content;
+      margin: 30px auto 0;
+      padding: 12px 24px;
+      background-color: #254592;
+      color: white;
+      border: none;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #1e2d6b;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-
-<nav>
-  <div class="nav-container">
-    <div class="logo">
-      <a href="index.html">TUTORWISE</a>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">TUTORWISE</a>
+      </div>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link grow-hover">Home</a></li>
+        <li><a href="services.html" class="nav-link grow-hover">Services</a></li>
+        <li><a href="about.html" class="nav-link grow-hover">About</a></li>
+        <li><a href="contact.html" class="nav-link grow-hover">Contact</a></li>
+        <li>
+          <a href="https://facebook.com/YourTutorWisePage" target="_blank" class="nav-link grow-hover" style="padding: 0;">
+            <div class="fb-icon">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="width:18px; height:18px; filter: invert(1);" />
+            </div>
+          </a>
+        </li>
+      </ul>
     </div>
-    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="index.html" class="nav-link grow-hover">Home</a></li>
-      <li><a href="services.html" class="nav-link grow-hover">Services</a></li>
-      <li><a href="about.html" class="nav-link grow-hover">About</a></li>
-      <li><a href="contact.html" class="nav-link grow-hover">Contact</a></li>
-      <li>
-        <a href="https://facebook.com/YourTutorWisePage" target="_blank" class="nav-link grow-hover" style="padding: 0;">
-          <div class="fb-icon">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
-                 alt="Facebook" style="width:18px; height:18px; filter: invert(1);" />
-          </div>
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-</script>
+  </nav>
 
   <div class="main-content">
+    <div style="height: 30px;"></div>
     <h1>About Us</h1>
     <p>
       TutorWise started as a true family business — a “mom and pop” operation in every sense. It began with a passionate local teacher who saw a need in her community. Determined to help students reach their full potential, she began tutoring after school to offer the support many children were missing in the classroom.
@@ -151,15 +182,15 @@
       Over time, her dedication inspired her son, who took over the business after graduating from university. With a fresh perspective and a strong foundation, he transformed TutorWise into what it is today: a results-driven tutoring center focused on student growth, confidence, and academic success.
     </p>
 
-    <div class="mission">
-      <h2>Our Mission</h2>
-      <p>To empower every student to achieve their full academic potential through personalized support, consistent structure, and a learning environment that inspires confidence and independence.</p>
-    </div>
+    <h2>Our Mission</h2>
+    <p>
+      To empower every student to achieve their full academic potential through personalized support, consistent structure, and a learning environment that inspires confidence and independence.
+    </p>
 
-    <div class="vision">
-      <h2>Our Vision</h2>
-      <p>To become Brampton’s most trusted tutoring center — known for student success, deep community roots, and a commitment to quality education.</p>
-    </div>
+    <h2>Our Vision</h2>
+    <p>
+      To become Brampton’s most trusted tutoring center — known for student success, deep community roots, and a commitment to quality education.
+    </p>
 
     <a href="services.html" class="cta-button">Explore Our Services</a>
   </div>
@@ -167,7 +198,6 @@
   <script>
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.getElementById('nav-links');
-
     menuToggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
     });
