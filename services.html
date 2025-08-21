@@ -1,85 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TutorWise</title>
-  <link rel="icon" href="logo.png" type="image/png">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/lucide-icons"></script>
-</head>
-<body class="bg-gray-50 text-gray-900">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TutorWise | Our Services</title>
+  <meta name="description" content="Explore TutorWise tutoring services in Brampton — K–12 tutoring, exam prep, IEP & ESL support, and more." />
+  <meta name="keywords" content="tutoring services, Brampton tutor, K-12 tutoring, IEP, ESL, exam prep" />
+  <meta name="author" content="TutorWise" />
 
-  <!-- Header -->
-  <header class="bg-[#254592] text-white shadow">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <div class="flex items-center space-x-3">
-        <img src="images/tutorwise_wording.png" alt="TutorWise Wording" class="h-10">
-        <img src="images/logo.png" alt="TutorWise Logo" class="h-10">
-      </div>
-      <nav class="space-x-6">
-        <a href="#services" class="hover:bg-[#c1ff72] hover:text-[#254592] px-3 py-2 rounded-lg">Services</a>
-        <a href="#contact" class="hover:bg-[#c1ff72] hover:text-[#254592] px-3 py-2 rounded-lg">Contact</a>
-      </nav>
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Quicksand', sans-serif;background:#f5bd5f;color:#333;max-width:1000px;margin:auto;}
+    :root{--brand-yellow:#f5bd5f;--brand-blue:#0a3bda;}
+    .tw-nav{background:#fff;border-radius:12px;padding:10px 16px;display:flex;justify-content:center;align-items:center;position:relative;margin:12px auto 0;max-width:1000px;}
+    .tw-links{list-style:none;display:flex;gap:14px;margin:0;padding:0;font-weight:700;flex-wrap:wrap;}
+    .tw-links a{color:var(--brand-blue);text-decoration:none;padding:8px 12px;border-radius:10px;display:inline-flex;align-items:center;gap:6px;transition:transform .15s ease, background .15s ease;}
+    .tw-links a:hover{transform:scale(1.08);background:rgba(10,59,218,.10);}
+    .tw-links a svg{width:18px;height:18px;fill:currentColor;}
+    .tw-menu-toggle{display:none;position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:26px;border:none;background:var(--brand-blue);color:#fff;border-radius:8px;padding:6px 10px;cursor:pointer;}
+    @media(max-width:768px){
+      .tw-menu-toggle{display:block;}
+      .tw-links{display:none;position:absolute;left:0;right:0;top:100%;background:var(--brand-blue);border-radius:12px;flex-direction:column;padding:10px;margin-top:8px;z-index:50;}
+      .tw-links.active{display:flex;}
+      .tw-links a{color:#fff;background:transparent;padding:12px 14px;border-radius:10px;}
+      .tw-links a:hover{background:rgba(255,255,255,.12);transform:scale(1.05);}
+    }
+    header{text-align:center;padding:40px 20px;}
+    .brand-wrap{display:flex;justify-content:center;align-items:center;gap:12px;margin-bottom:10px;}
+    .brand-wrap img{height:70px;}
+    header p{font-size:1.2rem;margin-top:5px;}
+    section{background:white;padding:40px 50px;border-radius:8px;margin:40px 0;box-shadow:0 0 10px rgba(0,0,0,0.05);}
+    section h2{color:var(--brand-blue);margin-bottom:20px;font-size:2.2rem;}
+    section p{font-size:1.1rem;line-height:1.6;}
+    .services-list{list-style:none;padding:0;margin:0;}
+    .services-list li{margin-bottom:30px;}
+    .service-title{font-size:1.5rem;font-weight:700;color:var(--brand-blue);display:flex;align-items:center;gap:10px;margin-bottom:6px;}
+    .service-title span{font-size:1.6rem;}
+    .service-desc{font-size:1.05rem;line-height:1.6;color:#333;margin-left:28px;}
+    .call-button{display:inline-block;margin-top:15px;background-color:var(--brand-blue);color:#fff;padding:12px 20px;border-radius:8px;font-weight:bold;text-decoration:none;transition:background-color .3s ease;}
+    .call-button:hover{background-color:#072c9e;}
+    footer{text-align:center;color:#333;font-size:0.9rem;margin:40px 0 20px;}
+    footer a{color:var(--brand-blue);font-weight:bold;text-decoration:none;}
+    footer a:hover{text-decoration:underline;}
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="tw-nav">
+    <button class="tw-menu-toggle" id="tw-toggle" aria-label="Open menu">☰</button>
+    <ul class="tw-links" id="tw-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.596 0 0 .597 0 1.333v21.334C0 23.403.596 24 1.325 24h11.495v-9.294H9.691V11.09h3.129V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.098 2.794.142v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.765v2.317h3.587l-.467 3.616h-3.12V24h6.116C23.404 24 24 23.403 24 22.667V1.333C24 .597 23.404 0 22.675 0z"/></svg>
+          <span>Facebook</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <div class="brand-wrap">
+      <img src="images/tutorwise_wording.png" alt="TutorWise Wording" class="site-logo">
+      <img src="images/logo.png" alt="Logo" class="site-logo">
     </div>
+    <p>Personalized Learning for Every Student</p>
   </header>
 
-  <!-- Hero -->
-  <section class="text-center py-20 bg-gradient-to-r from-[#254592] to-[#1a3368] text-white">
-    <h1 class="text-5xl font-bold mb-4">Welcome to TutorWise</h1>
-    <p class="text-lg">Personalized tutoring that helps every child succeed.</p>
+  <!-- SERVICES LIST -->
+  <section>
+    <h2>Our Services</h2>
+    <ul class="services-list">
+      <li>
+        <div class="service-title"><span>✏️</span> Personalized Tutoring for All K–12 Grades</div>
+        <div class="service-desc">Custom support to strengthen core concepts and build confidence.</div>
+      </li>
+      <li>
+        <div class="service-title"><span>✏️</span> In-person Sessions</div>
+        <div class="service-desc">Hands-on guidance at our Brampton center with a focused learning environment.</div>
+      </li>
+      <li>
+        <div class="service-title"><span>✏️</span> Subject Support</div>
+        <div class="service-desc">Math, Science, English, and all core subjects covered from elementary to high school.</div>
+      </li>
+      <li>
+        <div class="service-title"><span>✏️</span> Support for IEP and ESL Students</div>
+        <div class="service-desc">Tailored strategies that align with unique learning needs.</div>
+      </li>
+      <li>
+        <div class="service-title"><span>✏️</span> Exam and Test Preparation</div>
+        <div class="service-desc">Proven strategies to prepare for tests, standardized exams, and finals.</div>
+      </li>
+      <li>
+        <div class="service-title"><span>✏️</span> Transition Support</div>
+        <div class="service-desc">Helping students bridge the gap from Applied to Academic streams.</div>
+      </li>
+      <li>
+        <div class="service-title"><span>✏️</span> Summer Accelerated Learning</div>
+        <div class="service-desc">Keep learning strong through the summer and get ahead for the school year.</div>
+      </li>
+      <li>
+        <div class="service-title"><span>✏️</span> Affordable, Flexible Pricing</div>
+        <div class="service-desc">Options to fit your family’s needs with no long-term contracts.</div>
+      </li>
+    </ul>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="py-16 container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
-
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Service 1 -->
-      <div class="bg-white shadow-lg rounded-2xl p-6">
-        <div class="flex items-center space-x-2 mb-2">
-          <i data-lucide="pencil" class="w-6 h-6 text-[#254592]"></i>
-          <h3 class="text-2xl font-semibold">Personalized Tutoring for All K–12 Grades</h3>
-        </div>
-        <p>Tailored lessons designed to meet students where they are and help them excel academically.</p>
-      </div>
-
-      <!-- Service 2 -->
-      <div class="bg-white shadow-lg rounded-2xl p-6">
-        <div class="flex items-center space-x-2 mb-2">
-          <i data-lucide="pencil" class="w-6 h-6 text-[#254592]"></i>
-          <h3 class="text-2xl font-semibold">Test Preparation and Study Skills</h3>
-        </div>
-        <p>Equipping students with strategies for exams and lifelong study habits.</p>
-      </div>
-
-      <!-- Service 3 -->
-      <div class="bg-white shadow-lg rounded-2xl p-6">
-        <div class="flex items-center space-x-2 mb-2">
-          <i data-lucide="pencil" class="w-6 h-6 text-[#254592]"></i>
-          <h3 class="text-2xl font-semibold">Focused Support in Math, Science, and Literacy</h3>
-        </div>
-        <p>Specialized instruction to strengthen core academic areas and build confidence.</p>
-      </div>
-    </div>
+  <!-- FINAL CTA -->
+  <section>
+    <h2>Ready to Start?</h2>
+    <p>Our team is here to guide your child every step of the way. Contact us to discuss the best tutoring plan for your needs.</p>
+    <a href="contact.html" class="call-button">📩 Get in Touch</a>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-16 bg-gray-100 text-center">
-    <h2 class="text-3xl font-bold mb-6">Ready to Start?</h2>
-    <p class="mb-6">Our team is here to guide your child every step of the way. Contact us to discuss the best tutoring plan for your needs.</p>
-    <a href="mailto:info@tutorwise.com" class="bg-[#254592] text-white px-6 py-3 rounded-xl shadow-lg hover:bg-[#c1ff72] hover:text-[#254592] transition">
-      📩 Get in Touch
-    </a>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-[#254592] text-white text-center py-6">
-    <p>&copy; 2025 TutorWise. All rights reserved.</p>
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 TutorWise. All rights reserved.<br />
+    <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Facebook</a>
   </footer>
 
   <script>
-    lucide.createIcons();
+    const twToggle=document.getElementById('tw-toggle');
+    const twLinks=document.getElementById('tw-links');
+    twToggle.addEventListener('click',()=>twLinks.classList.toggle('active'));
   </script>
 </body>
 </html>
