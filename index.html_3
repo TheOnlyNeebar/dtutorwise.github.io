@@ -7,43 +7,105 @@
   <meta name="description" content="TutorWise offers personalized tutoring services in Brampton. Expert tutors for math, science, English, and test prep to help students succeed." />
   <meta name="keywords" content="tutoring, tutoring near me, tutoring in Brampton, TutorWise, math tutor, science tutor, test prep" />
   <meta name="author" content="TutorWise" />
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
   <style>
-    /* --- Basic Reset --- */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
-      background: #f0f4f8;
+      background: #f5bd5f; /* branding background */
       color: #333;
-      padding: 20px;
       max-width: 900px;
       margin: auto;
+      padding: 0 20px;
     }
 
-    header {
-      background-color: #1e90ff;
+    /* ===== Nav Bar ===== */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      background: white;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    .brand {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 2rem;
+      color: #0a3bda;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #0a3bda;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      background: #0a3bda;
       color: white;
-      padding: 20px 0;
+      border: none;
+      border-radius: 5px;
+      padding: 4px 10px;
+    }
+
+    /* Mobile nav */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #0a3bda; /* dark blue dropdown */
+        border-radius: 0 0 8px 8px;
+      }
+
+      .nav-links.active { display: flex; }
+
+      .nav-links a {
+        color: white;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+      }
+
+      .menu-toggle { display: block; }
+    }
+
+    /* ===== Hero Section ===== */
+    header {
+      background-color: white;
+      padding: 20px;
       text-align: center;
       border-radius: 8px;
       margin-bottom: 30px;
     }
 
     header h1 {
+      font-family: 'Permanent Marker', cursive;
       font-size: 2.5rem;
-      margin-bottom: 5px;
+      color: #0a3bda;
+      margin-bottom: 10px;
     }
 
     header p {
       font-size: 1.2rem;
       font-weight: 300;
+      color: #333;
     }
 
+    /* ===== Sections ===== */
     section {
       background: white;
       padding: 20px 30px;
@@ -54,8 +116,8 @@
 
     section h2 {
       margin-bottom: 15px;
-      color: #1e90ff;
-      border-bottom: 2px solid #1e90ff;
+      color: #0a3bda;
+      border-bottom: 2px solid #0a3bda;
       padding-bottom: 5px;
     }
 
@@ -77,30 +139,22 @@
 
     ul.services-list li h3 {
       margin-bottom: 8px;
-      color: #0c47b7;
+      color: #0a3bda;
     }
 
-    /* Testimonials */
     blockquote {
       font-style: italic;
       background: #f9f9f9;
       padding: 15px 20px;
-      border-left: 5px solid #1e90ff;
+      border-left: 5px solid #0a3bda;
       margin-bottom: 15px;
       border-radius: 5px;
       color: #555;
     }
 
-    /* Contact Form */
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
+    form { display: flex; flex-direction: column; gap: 15px; }
 
-    label {
-      font-weight: bold;
-    }
+    label { font-weight: bold; }
 
     input, textarea {
       padding: 8px 10px;
@@ -111,7 +165,7 @@
     }
 
     button {
-      background-color: #1e90ff;
+      background-color: #0a3bda;
       color: white;
       padding: 12px;
       border: none;
@@ -121,38 +175,44 @@
       transition: background-color 0.3s ease;
     }
 
-    button:hover {
-      background-color: #0c62d1;
-    }
+    button:hover { background-color: #072f9c; }
 
     footer {
       text-align: center;
-      color: #777;
+      color: #333;
       font-size: 0.9rem;
       margin-top: 40px;
       padding-bottom: 20px;
     }
 
     footer a {
-      color: #1e90ff;
+      color: #0a3bda;
       text-decoration: none;
       margin: 0 10px;
       font-weight: bold;
     }
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+    footer a:hover { text-decoration: underline; }
 
-    /* Responsive */
     @media (max-width: 600px) {
-      ul.services-list li {
-        flex: 1 1 100%;
-      }
+      ul.services-list li { flex: 1 1 100%; }
     }
   </style>
 </head>
 <body>
+
+  <!-- ===== Navbar ===== -->
+  <nav>
+    <a href="index.html" class="brand">TutorWise</a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Facebook</a>
+    </div>
+  </nav>
+
   <!-- ======= Header / Hero Section ======= -->
   <header>
     <h1>TutorWise</h1>
@@ -163,22 +223,10 @@
   <section id="services">
     <h2>Our Services</h2>
     <ul class="services-list">
-      <li>
-        <h3>Math Tutoring</h3>
-        <p>From basic arithmetic to calculus for all grade levels.</p>
-      </li>
-      <li>
-        <h3>Science Tutoring</h3>
-        <p>Physics, Chemistry, Biology — clear explanations for complex topics.</p>
-      </li>
-      <li>
-        <h3>English & Writing</h3>
-        <p>Reading comprehension, essay writing, grammar help.</p>
-      </li>
-      <li>
-        <h3>Test Prep</h3>
-        <p>Prepare for standardized tests with personalized strategies.</p>
-      </li>
+      <li><h3>Math Tutoring</h3><p>From basic arithmetic to calculus for all grade levels.</p></li>
+      <li><h3>Science Tutoring</h3><p>Physics, Chemistry, Biology — clear explanations for complex topics.</p></li>
+      <li><h3>English & Writing</h3><p>Reading comprehension, essay writing, grammar help.</p></li>
+      <li><h3>Test Prep</h3><p>Prepare for standardized tests with personalized strategies.</p></li>
     </ul>
   </section>
 
@@ -191,12 +239,8 @@
   <!-- ======= Testimonials Section ======= -->
   <section id="testimonials">
     <h2>Testimonials</h2>
-    <blockquote>
-      “TutorWise helped my son improve his math skills dramatically. The personalized approach really made a difference!” – Sarah K.
-    </blockquote>
-    <blockquote>
-      “Friendly, patient, and effective tutoring. Highly recommend TutorWise!” – Mark L.
-    </blockquote>
+    <blockquote>“TutorWise helped my son improve his math skills dramatically. The personalized approach really made a difference!” – Sarah K.</blockquote>
+    <blockquote>“Friendly, patient, and effective tutoring. Highly recommend TutorWise!” – Mark L.</blockquote>
   </section>
 
   <!-- ======= Contact Section ======= -->
@@ -205,13 +249,10 @@
     <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required />
-
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required />
-
       <label for="message">Message:</label>
       <textarea id="message" name="message" rows="5" required></textarea>
-
       <button type="submit">Send Message</button>
     </form>
     <p>Or reach us by phone at: <strong>(123) 456-7890</strong></p>
@@ -219,9 +260,10 @@
 
   <footer>
     &copy; 2025 TutorWise. All rights reserved.<br />
-    <a href="https://facebook.com/YourTutorWisePage" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank" rel="noopener">Facebook</a>
     <a href="https://instagram.com/YourTutorWisePage" target="_blank" rel="noopener">Instagram</a>
     <a href="https://twitter.com/YourTutorWisePage" target="_blank" rel="noopener">Twitter</a>
   </footer>
+
 </body>
 </html>
