@@ -134,7 +134,99 @@
         text-align: center;
         margin: 10px 0;
       }
-    }
+        /* ========== Unified Kid-Friendly Nav ========== */
+:root{
+  --brand-yellow:#f5bd5f;
+  --brand-blue:#0a3bda;
+}
+
+.tw-nav{
+  background:#fff;
+  border-radius:12px;
+  padding:10px 16px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  margin:12px auto 0;
+  max-width:1000px;
+}
+
+.tw-links{
+  list-style:none;
+  display:flex;
+  gap:14px;
+  margin:0;
+  padding:0;
+  font-family:'Quicksand', system-ui, sans-serif;
+  font-weight:700;
+  flex-wrap:wrap;
+}
+
+.tw-links a{
+  color:var(--brand-blue);
+  text-decoration:none;
+  padding:8px 12px;
+  border-radius:10px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  transition:transform .15s ease, background .15s ease;
+}
+
+.tw-links a:hover{
+  transform:scale(1.08);
+  background:rgba(10,59,218,.10); /* subtle darker rectangle */
+}
+
+/* Facebook icon inherits link color on desktop, white on mobile */
+.tw-links a svg{
+  width:18px;height:18px;display:block;fill:currentColor;
+}
+
+/* Hamburger (hidden on desktop) */
+.tw-menu-toggle{
+  display:none;
+  position:absolute;
+  right:12px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:26px;
+  line-height:1;
+  border:none;
+  background:var(--brand-blue);
+  color:#fff;
+  border-radius:8px;
+  padding:6px 10px;
+  cursor:pointer;
+}
+
+/* ========== Mobile ========== */
+@media (max-width:768px){
+  .tw-menu-toggle{ display:block; }
+  .tw-links{
+    display:none;
+    position:absolute;
+    left:0; right:0; top:100%;
+    background:var(--brand-blue);      /* dark blue dropdown */
+    border-radius:12px;
+    flex-direction:column;
+    padding:10px;
+    margin-top:8px;
+    z-index:50;
+  }
+  .tw-links.active{ display:flex; }
+  .tw-links a{
+    color:#fff;                        /* white links in dropdown */
+    background:transparent;
+    padding:12px 14px;
+    border-radius:10px;
+  }
+  .tw-links a:hover{
+    background:rgba(255,255,255,.12);
+    transform:scale(1.05);
+  }
+}
   </style>
   <!-- Google Fonts for Permanent Marker -->
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
