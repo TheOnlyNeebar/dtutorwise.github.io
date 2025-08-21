@@ -18,72 +18,103 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f0f4f8;
+      background: #f5bd5f; /* Branding background */
       color: #333;
-      padding: 20px;
       max-width: 1000px;
       margin: auto;
     }
 
-    nav ul {
-      list-style: none;
+    /* Navigation */
+    nav {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      padding: 15px 30px;
-      background: #254592;
+      padding: 15px 20px;
+      background: white;
     }
 
-    .nav-link {
-      color: white;
+    .brand {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 28px;
+      color: #0a3bda; /* Branding blue */
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #0a3bda;
       text-decoration: none;
       font-weight: bold;
-      padding: 6px 12px;
-      border-radius: 4px;
-      transition: all 0.3s ease;
     }
 
-    .grow-hover:hover {
-      transform: scale(1.2);
-      font-size: 1.1rem;
-      background-color: #1e2d6b;
+    /* Hamburger (hidden on desktop) */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: white;
+      background: #0a3bda;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
     }
 
-    nav ul li a:hover img {
-      transform: scale(1.2);
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: #0a3bda; /* Dark blue dropdown */
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        color: white;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+      }
+
+      .menu-toggle {
+        display: block;
+      }
     }
 
     header {
-      background-color: #254592;
-      color: #c1ff72;
-      padding: 40px 0;
       text-align: center;
-      border-radius: 8px;
-      margin-bottom: 50px;
+      padding: 50px 20px;
     }
 
     header h1 {
       font-family: 'Permanent Marker', cursive;
       font-size: 3rem;
-      text-transform: uppercase;
+      color: #0a3bda;
     }
 
     header p {
       font-size: 1.2rem;
-      color: #f0f4f8;
+      margin-top: 10px;
+      color: #333;
     }
 
     section {
       background: white;
       padding: 40px 50px;
       border-radius: 8px;
-      margin-bottom: 50px;
+      margin: 40px 0;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
 
     section h2 {
-      color: #254592;
+      color: #0a3bda;
       margin-bottom: 20px;
       font-size: 2rem;
     }
@@ -96,8 +127,8 @@
     .call-button {
       display: inline-block;
       margin-top: 15px;
-      background-color: #254592;
-      color: #c1ff72;
+      background-color: #0a3bda;
+      color: white;
       padding: 12px 20px;
       border-radius: 8px;
       font-weight: bold;
@@ -106,7 +137,7 @@
     }
 
     .call-button:hover {
-      background-color: #1e2d6b;
+      background-color: #072c9e;
     }
 
     input, textarea {
@@ -117,8 +148,8 @@
     }
 
     input[type="submit"] {
-      background-color: #254592;
-      color: #c1ff72;
+      background-color: #0a3bda;
+      color: white;
       font-weight: bold;
       cursor: pointer;
       border: none;
@@ -126,7 +157,7 @@
     }
 
     input[type="submit"]:hover {
-      background-color: #1e2d6b;
+      background-color: #072c9e;
     }
 
     iframe {
@@ -139,14 +170,13 @@
 
     footer {
       text-align: center;
-      color: #777;
+      color: #333;
       font-size: 0.9rem;
-      margin-top: 40px;
-      padding-bottom: 20px;
+      margin: 40px 0 20px;
     }
 
     footer a {
-      color: #254592;
+      color: #0a3bda;
       text-decoration: none;
       margin: 0 10px;
       font-weight: bold;
@@ -155,53 +185,26 @@
     footer a:hover {
       text-decoration: underline;
     }
-
-    @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      header h1 {
-        font-size: 2.2rem;
-      }
-
-      section {
-        padding: 30px 20px;
-      }
-    }
   </style>
 </head>
 <body>
 
   <!-- Navigation -->
-<nav>
-  <div class="nav-container">
-    <div class="logo">
-      <a href="index.html" class="nav-link grow-hover">TUTORWISE</a>
+  <nav>
+    <a href="index.html" class="brand">TutorWise</a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">&#9776;</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Facebook</a>
     </div>
-    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="index.html" class="nav-link grow-hover">Home</a></li>
-      <li><a href="services.html" class="nav-link grow-hover">Services</a></li>
-      <li><a href="about.html" class="nav-link grow-hover">About</a></li>
-      <li><a href="contact.html" class="nav-link grow-hover">Contact</a></li>
-      <li>
-        <a href="https://facebook.com/YourTutorWisePage" target="_blank" class="nav-link grow-hover" style="padding: 0;">
-          <div class="fb-icon">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
-                 alt="Facebook" style="width:18px; height:18px; filter: invert(1);" />
-          </div>
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
+  </nav>
 
   <!-- Header -->
   <header>
-    <h1>TUTORWISE</h1>
+    <h1>TutorWise</h1>
     <p>Empowering Students, One Lesson at a Time</p>
   </header>
 
@@ -215,9 +218,9 @@
 
   <!-- Contact Section on Home Page -->
   <section id="contact-home">
-    <h2 style="color:#254592; margin-bottom: 20px;">Get in Touch</h2>
+    <h2>Get in Touch</h2>
 
-    <div class="contact-details" style="line-height: 2; font-size: 1.1rem; margin-bottom: 30px;">
+    <div style="line-height: 2; font-size: 1.1rem; margin-bottom: 30px;">
       📍 Address: 14 Automatic Rd, Brampton, ON L6S 5N5<br />
       📞 Phone: <a href="tel:6476778767">647-677-8767</a><br />
       📧 Email: <a href="mailto:tutoringnim@gmail.com">tutoringnim@gmail.com</a><br />
@@ -243,9 +246,7 @@
   <!-- Footer -->
   <footer>
     &copy; 2025 TutorWise. All rights reserved.<br />
-    <a href="https://facebook.com/YourTutorWisePage" target="_blank">Facebook</a>
-    <a href="https://instagram.com/YourTutorWisePage" target="_blank">Instagram</a>
-    <a href="https://twitter.com/YourTutorWisePage" target="_blank">Twitter</a>
+    <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Facebook</a>
   </footer>
 
 </body>
