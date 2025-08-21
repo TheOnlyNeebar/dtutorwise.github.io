@@ -6,203 +6,171 @@
   <title>About Us - TutorWise</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f5bd5f;
+      font-family: Arial, sans-serif;
+      background-color: #f5bd5f; /* New yellow background */
       color: #333;
     }
 
     header {
-      background-color: #254592;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      background-color: #f5bd5f; /* Yellow */
+      color: #0a3bda; /* Blue */
+      padding: 20px;
+      text-align: center;
+      font-family: 'Permanent Marker', cursive;
     }
 
     header h1 {
-      color: #0a3bda;
-      font-family: "Permanent Marker", cursive;
-      font-size: 28px;
       margin: 0;
+      font-size: 2.5em;
+      color: #0a3bda; /* Blue brand color */
     }
 
     nav {
+      background-color: #0a3bda; /* Blue */
       display: flex;
+      justify-content: space-between;
       align-items: center;
+      padding: 10px 20px;
     }
 
-    nav ul {
+    .nav-links {
       list-style: none;
       margin: 0;
       padding: 0;
       display: flex;
     }
 
-    nav ul li {
+    .nav-links li {
       margin-left: 20px;
     }
 
-    nav ul li a {
-      text-decoration: none;
+    .nav-links a {
       color: white;
-      padding: 8px 12px;
-      border-radius: 8px;
-      transition: background 0.3s;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      padding: 6px 12px;
+      border-radius: 5px;
     }
 
-    nav ul li a:hover {
+    .nav-links a:hover {
       background-color: #1e2d6b;
     }
 
     .menu-toggle {
       display: none;
-      flex-direction: column;
+      font-size: 24px;
+      color: white;
+      background: none;
+      border: none;
       cursor: pointer;
-    }
-
-    .menu-toggle div {
-      width: 25px;
-      height: 3px;
-      background: white;
-      margin: 4px 0;
-      transition: all 0.3s ease;
     }
 
     .about-section {
       max-width: 900px;
-      margin: 40px auto;
+      margin: 60px auto; /* Added spacing above text */
       padding: 20px;
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
     .about-section h2 {
-      color: #254592;
-      font-size: 26px;
-      margin-bottom: 15px;
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #0a3bda;
+      text-align: center;
     }
 
     .about-section p {
-      font-size: 18px;
       line-height: 1.6;
       margin-bottom: 15px;
+      font-size: 1.1em;
     }
 
-    footer {
-      background-color: #254592;
-      color: white;
-      text-align: center;
-      padding: 15px 10px;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    .cta-button {
-      display: inline-block;
-      background-color: #254592;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background-color 0.3s, transform 0.2s;
-      font-size: 18px;
+    .social-links {
       margin-top: 20px;
+      text-align: center;
     }
 
-    .cta-button:hover {
+    .social-links a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+
+    .social-links img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+    }
+
+    .social-links img:hover {
       background-color: #1e2d6b;
-      transform: scale(1.05);
+      border-radius: 50%;
     }
 
-    /* Hamburger menu only on smaller screens */
+    /* Mobile styles */
     @media (max-width: 768px) {
       .menu-toggle {
-        display: flex;
+        display: block;
       }
-      nav ul {
+
+      .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
         margin-top: 10px;
-        background-color: #254592;
+        background-color: #0a3bda; /* Dark blue dropdown */
         padding: 10px 0;
       }
-      nav ul.active {
+
+      .nav-links.active {
         display: flex;
       }
-      nav ul li {
+
+      .nav-links li {
         text-align: center;
         margin: 10px 0;
       }
     }
-
-    nav ul.active {
-      background-color: #254592;
-    }
   </style>
+  <!-- Google Fonts for Permanent Marker -->
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <h1>TUTORWISE</h1>
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li>
-          <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">
-            Facebook
-          </a>
-        </li>
-      </ul>
-    </nav>
   </header>
 
+  <nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
   <section class="about-section">
-    <h2>Our Story</h2>
-    <p>
-      TutorWise began as a family-run tutoring company, founded by a passionate teacher and mother dedicated to helping students succeed. Today, it continues under her son’s leadership, bringing the same values of care, dedication, and personalized attention to every student.
-    </p>
+    <h2>About Us</h2>
+    <p>TutorWise was founded as a family business by a dedicated teacher who wanted to give students the support they deserved. Today, it’s proudly led by her son, continuing the same mission of growth, results, and personalized attention.</p>
+    <p>At TutorWise, we believe every student learns differently. That’s why our focus is on tailored support, helping students build confidence while achieving academic success.</p>
+    <p>Our mission is simple: to provide a learning environment that fosters curiosity, understanding, and measurable progress. Our vision is to help each student discover their full potential while making education enjoyable and meaningful.</p>
 
-    <h2>Our Mission</h2>
-    <p>
-      Our mission is to provide high-quality tutoring that focuses on growth, results, and meeting the unique needs of every student. We believe education should build confidence as well as knowledge.
-    </p>
-
-    <h2>Our Vision</h2>
-    <p>
-      At TutorWise, we envision a learning environment where students feel supported and empowered. We don’t offer one-size-fits-all solutions — we adapt to help each student succeed in their own way.
-    </p>
-
-    <a href="contact.html" class="cta-button">Contact Us</a>
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+      </a>
+    </div>
   </section>
-
-  <footer>
-    <p>© 2025 TutorWise. All Rights Reserved.</p>
-    <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Facebook</a>
-  </footer>
 
   <script>
     function toggleMenu() {
-      document.querySelector(".nav-links").classList.toggle("active");
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
     }
   </script>
 </body>
