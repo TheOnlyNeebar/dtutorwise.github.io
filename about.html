@@ -10,7 +10,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      background-color: #f5bd5f;
     }
 
     nav {
@@ -71,7 +71,7 @@
 
     .logo a {
       font-family: 'Permanent Marker', cursive;
-      color: #c1ff72 !important;
+      color: #0a3bda !important;
       font-size: 24px;
       text-decoration: none;
       padding: 8px 16px;
@@ -146,7 +146,33 @@
     .cta-button:hover {
       background-color: #1e2d6b;
       transform: scale(1.05);
-    }
+    
+      /* Force hamburger to only show on smaller screens */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #254592;
+    padding: 10px 0;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+/* Optional: dark blue background overlay for dropdown */
+.nav-links.active {
+  background-color: #254592;
+}
   </style>
 </head>
 <body>
