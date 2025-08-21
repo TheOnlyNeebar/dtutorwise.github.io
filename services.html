@@ -1,222 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services | TutorWise</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-    }
-
-    nav {
-      background-color: #254592;
-      padding: 10px 20px;
-    }
-
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 20px;
-    }
-
-    .nav-links li {
-      position: relative;
-    }
-
-    .nav-link {
-      text-decoration: none;
-      color: white;
-      padding: 8px 16px;
-      border-radius: 4px;
-      transition: all 0.3s ease;
-    }
-
-    .grow-hover:hover {
-      background-color: #1e2d6b;
-      font-size: 1.1em;
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 28px;
-      color: white;
-      cursor: pointer;
-    }
-
-    .fb-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background-color 0.3s ease;
-    }
-
-    .fb-icon:hover {
-      background-color: #1e2d6b;
-    }
-
-    .logo a {
-      font-family: 'Permanent Marker', cursive;
-      color: #c1ff72 !important;
-      font-size: 24px;
-      text-decoration: none;
-      padding: 8px 16px;
-      border-radius: 4px;
-      transition: background-color 0.3s, font-size 0.3s;
-    }
-
-    .logo a:hover {
-      background-color: #1e2d6b;
-      font-size: 1.1em;
-    }
-
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 10px;
-        background-color: #254592;
-        padding: 10px 0;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .nav-links li {
-        text-align: center;
-        margin: 10px 0;
-      }
-    }
-
-    .main-content {
-      max-width: 960px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .main-content h1 {
-      color: #254592;
-      text-align: center;
-      padding-top: 30px;
-    }
-
-    .service-section {
-      padding: 20px;
-    }
-
-    .service-section h3 {
-      color: #254592;
-      margin-top: 20px;
-    }
-
-    .service-section p {
-      margin-bottom: 10px;
-    }
-
-    .cta-button {
-      display: block;
-      width: fit-content;
-      margin: 30px auto 50px;
-      padding: 12px 24px;
-      background-color: #254592;
-      color: white;
-      border: none;
-      font-weight: bold;
-      border-radius: 4px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: transform 0.3s;
-    }
-
-    .cta-button:hover {
-      background-color: #1e2d6b;
-      transform: scale(1.05);
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | TutorWise</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logo.png" type="image/png">
+  <script src="https://kit.fontawesome.com/6e4e9d5b8a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <nav>
-    <div class="nav-container">
-      <div class="logo">
-        <a href="index.html">TUTORWISE</a>
-      </div>
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" class="nav-link grow-hover">Home</a></li>
-        <li><a href="services.html" class="nav-link grow-hover">Services</a></li>
-        <li><a href="about.html" class="nav-link grow-hover">About</a></li>
-        <li><a href="contact.html" class="nav-link grow-hover">Contact</a></li>
-        <li>
-          <a href="https://facebook.com/YourTutorWisePage" target="_blank" class="nav-link grow-hover" style="padding: 0;">
-            <div class="fb-icon">
-              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
-                   alt="Facebook" style="width:18px; height:18px; filter: invert(1);" />
-            </div>
-          </a>
-        </li>
+  <!-- NAV BAR (same as home page) -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">TUTORWISE</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <div class="main-content">
+  <!-- HERO SECTION -->
+  <section class="hero">
     <h1>Our Services</h1>
-    <div class="service-section">
-      <h3>Personalized Tutoring for All K–12 Grades</h3>
-      <p>We provide custom support tailored to each student's grade level, helping them understand core concepts and build lasting academic confidence.</p>
+    <p>Dedicated tutoring designed for growth, confidence, and academic success.</p>
+  </section>
 
-      <h3>In-person Sessions Based on Your Preference</h3>
-      <p>All sessions are conducted in person at our Brampton center, ensuring students benefit from hands-on support and focused learning environments.</p>
-
-      <h3>Subject Support in Math, Science, English & More</h3>
-      <p>Whether it's reading comprehension, advanced algebra, or chemistry — we cover all core school subjects across elementary and high school levels.</p>
-
-      <h3>Support for IEP and ESL Students</h3>
-      <p>We work with IEP and ESL students to ensure they receive consistent and effective strategies that align with their unique learning needs.</p>
-
-      <h3>Exam and Test Preparation</h3>
-      <p>Our proven preparation strategies help students feel confident and ready to tackle classroom tests, standardized exams, and final assessments.</p>
-
-      <h3>Transition Support: Applied to Academic</h3>
-      <p>We help students bridge the gap between Applied and Academic streams with focused tutoring that strengthens foundational understanding.</p>
-
-      <h3>Summer Accelerated Learning Program</h3>
-      <p>Designed to keep students learning and growing through the summer, this program helps them get ahead and return to school with confidence.</p>
-
-      <h3>Affordable, Flexible Pricing</h3>
-      <p>We believe in accessible education. Our flexible pricing options are designed to fit your family's needs with no long-term commitment required.</p>
+  <!-- SERVICES LIST -->
+  <section class="services">
+    <div class="service">
+      <i class="fas fa-user-graduate"></i>
+      <h2>Personalized Tutoring for All K–12 Grades</h2>
+      <p>Custom support tailored to each student's grade level, helping them understand core concepts and build lasting confidence.</p>
     </div>
-    <a href="contact.html" class="cta-button">Get in Touch</a>
-  </div>
 
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  </script>
+    <div class="service">
+      <i class="fas fa-chalkboard-teacher"></i>
+      <h2>In-person Sessions Based on Your Preference</h2>
+      <p>All sessions are conducted in person at our Brampton center, ensuring focused and hands-on learning environments.</p>
+    </div>
+
+    <div class="service">
+      <i class="fas fa-book"></i>
+      <h2>Subject Support in Math, Science, English & More</h2>
+      <p>From reading comprehension to advanced algebra or chemistry — we cover all core subjects across elementary and high school levels.</p>
+    </div>
+
+    <div class="service">
+      <i class="fas fa-hands-helping"></i>
+      <h2>Support for IEP and ESL Students</h2>
+      <p>We provide effective strategies tailored to unique learning needs for both IEP and ESL students.</p>
+    </div>
+
+    <div class="service">
+      <i class="fas fa-pencil-alt"></i>
+      <h2>Exam and Test Preparation</h2>
+      <p>Our proven preparation methods help students feel confident and ready for tests, standardized exams, and final assessments.</p>
+    </div>
+  </section>
+
+  <!-- CTA BREAK -->
+  <section class="cta">
+    <h2>Ready to Start Learning?</h2>
+    <p>Let’s build confidence and results together — get in touch with us today.</p>
+    <a href="contact.html" class="btn">Get in Touch</a>
+  </section>
+
+  <!-- MORE SERVICES -->
+  <section class="services">
+    <div class="service">
+      <i class="fas fa-exchange-alt"></i>
+      <h2>Transition Support: Applied to Academic</h2>
+      <p>We help students bridge the gap between Applied and Academic streams with tutoring that strengthens core understanding.</p>
+    </div>
+
+    <div class="service">
+      <i class="fas fa-sun"></i>
+      <h2>Summer Accelerated Learning Program</h2>
+      <p>Designed to keep students learning and growing, this program helps them get ahead and return to school with confidence.</p>
+    </div>
+
+    <div class="service">
+      <i class="fas fa-wallet"></i>
+      <h2>Affordable, Flexible Pricing</h2>
+      <p>Accessible education with flexible pricing options — no long-term commitment required.</p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta">
+    <h2>Take the Next Step with TutorWise</h2>
+    <p>Your child’s growth and confidence start here.</p>
+    <a href="contact.html" class="btn">Get in Touch</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 TutorWise. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
