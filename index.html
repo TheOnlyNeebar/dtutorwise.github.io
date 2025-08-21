@@ -7,208 +7,221 @@
   <meta name="description" content="TutorWise offers in-person and online tutoring in Brampton for K–12 students. Personalized, licensed support for all subjects and needs." />
   <meta name="keywords" content="brampton tutoring, tutorwise, tutoring near me, online tutoring, math tutor, science tutor, K-12 help, ESL tutoring" />
   <meta name="author" content="TutorWise" />
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+  <!-- Favicon (put your logo file as favicon.ico or .png in your project root) -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Permanent+Marker&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    *{box-sizing:border-box;margin:0;padding:0;}
+
+    body{
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background:#f5bd5f; /* Branding yellow */
+      color:#333;
+      max-width:1000px;
+      margin:auto;
     }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f5bd5f; /* Branding background */
-      color: #333;
-      max-width: 1000px;
-      margin: auto;
+    :root{
+      --brand-yellow:#f5bd5f;
+      --brand-blue:#0a3bda;
     }
 
-    /* Navigation */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 20px;
-      background: white;
+    /* ===== NAVIGATION ===== */
+    .tw-nav{
+      background:#fff;
+      border-radius:12px;
+      padding:10px 16px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      position:relative;
+      margin:12px auto 0;
+      max-width:1000px;
     }
-
-    .brand {
-      font-family: 'Permanent Marker', cursive;
-      font-size: 28px;
-      color: #0a3bda; /* Branding blue */
-      text-decoration: none;
+    .tw-links{
+      list-style:none;
+      display:flex;
+      gap:14px;
+      margin:0;
+      padding:0;
+      font-family:'Quicksand', sans-serif;
+      font-weight:700;
+      flex-wrap:wrap;
     }
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
+    .tw-links a{
+      color:var(--brand-blue);
+      text-decoration:none;
+      padding:8px 12px;
+      border-radius:10px;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      transition:transform .15s ease, background .15s ease;
     }
-
-    .nav-links a {
-      color: #0a3bda;
-      text-decoration: none;
-      font-weight: bold;
+    .tw-links a:hover{
+      transform:scale(1.08);
+      background:rgba(10,59,218,.10);
     }
-
-    /* Hamburger (hidden on desktop) */
-    .menu-toggle {
-      display: none;
-      font-size: 28px;
-      cursor: pointer;
-      color: white;
-      background: #0a3bda;
-      border: none;
-      padding: 5px 10px;
-      border-radius: 5px;
+    .tw-links a svg{
+      width:18px;height:18px;fill:currentColor;
     }
-
-    /* Mobile styles */
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        background: #0a3bda; /* Dark blue dropdown */
+    .tw-menu-toggle{
+      display:none;
+      position:absolute;
+      right:12px;
+      top:50%;
+      transform:translateY(-50%);
+      font-size:26px;
+      border:none;
+      background:var(--brand-blue);
+      color:#fff;
+      border-radius:8px;
+      padding:6px 10px;
+      cursor:pointer;
+    }
+    @media(max-width:768px){
+      .tw-menu-toggle{display:block;}
+      .tw-links{
+        display:none;
+        position:absolute;
+        left:0;right:0;top:100%;
+        background:var(--brand-blue);
+        border-radius:12px;
+        flex-direction:column;
+        padding:10px;
+        margin-top:8px;
+        z-index:50;
       }
-
-      .nav-links.active {
-        display: flex;
+      .tw-links.active{display:flex;}
+      .tw-links a{
+        color:#fff;
+        background:transparent;
+        padding:12px 14px;
+        border-radius:10px;
       }
-
-      .nav-links a {
-        color: white;
-        padding: 15px 0;
-        border-bottom: 1px solid rgba(255,255,255,0.2);
-      }
-
-      .menu-toggle {
-        display: block;
+      .tw-links a:hover{
+        background:rgba(255,255,255,.12);
+        transform:scale(1.05);
       }
     }
 
-    header {
-      text-align: center;
-      padding: 50px 20px;
+    /* ===== HEADER ===== */
+    header{
+      text-align:center;
+      padding:50px 20px;
+    }
+    header h1{
+      font-family:'Permanent Marker',cursive;
+      font-size:3rem;
+      color:var(--brand-blue);
+    }
+    header p{
+      font-size:1.2rem;
+      margin-top:10px;
     }
 
-    header h1 {
-      font-family: 'Permanent Marker', cursive;
-      font-size: 3rem;
-      color: #0a3bda;
+    /* ===== SECTIONS ===== */
+    section{
+      background:white;
+      padding:40px 50px;
+      border-radius:8px;
+      margin:40px 0;
+      box-shadow:0 0 10px rgba(0,0,0,0.05);
+    }
+    section h2{
+      color:var(--brand-blue);
+      margin-bottom:20px;
+      font-size:2rem;
+    }
+    section p{font-size:1.1rem;line-height:1.6;}
+
+    /* List section */
+    .info-list{
+      list-style:disc inside;
+      font-size:1.1rem;
+      line-height:1.8;
+      color:#333;
     }
 
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      color: #333;
+    /* Buttons */
+    .call-button{
+      display:inline-block;
+      margin-top:15px;
+      background-color:var(--brand-blue);
+      color:#fff;
+      padding:12px 20px;
+      border-radius:8px;
+      font-weight:bold;
+      text-decoration:none;
+      transition:background-color .3s ease;
+    }
+    .call-button:hover{background-color:#072c9e;}
+
+    /* Forms */
+    input,textarea{
+      padding:10px;
+      font-size:1rem;
+      border:1px solid #ccc;
+      border-radius:6px;
+    }
+    input[type="submit"]{
+      background-color:var(--brand-blue);
+      color:#fff;
+      font-weight:bold;
+      cursor:pointer;
+      border:none;
+      transition:background-color .3s ease;
+    }
+    input[type="submit"]:hover{background-color:#072c9e;}
+
+    iframe{
+      border:0;
+      width:100%;
+      height:300px;
+      margin-top:30px;
+      border-radius:8px;
     }
 
-    section {
-      background: white;
-      padding: 40px 50px;
-      border-radius: 8px;
-      margin: 40px 0;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    footer{
+      text-align:center;
+      color:#333;
+      font-size:0.9rem;
+      margin:40px 0 20px;
     }
-
-    section h2 {
-      color: #0a3bda;
-      margin-bottom: 20px;
-      font-size: 2rem;
-    }
-
-    section p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    .call-button {
-      display: inline-block;
-      margin-top: 15px;
-      background-color: #0a3bda;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .call-button:hover {
-      background-color: #072c9e;
-    }
-
-    input, textarea {
-      padding: 10px;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    input[type="submit"] {
-      background-color: #0a3bda;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      border: none;
-      transition: background-color 0.3s ease;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #072c9e;
-    }
-
-    iframe {
-      border: 0;
-      width: 100%;
-      height: 300px;
-      margin-top: 30px;
-      border-radius: 8px;
-    }
-
-    footer {
-      text-align: center;
-      color: #333;
-      font-size: 0.9rem;
-      margin: 40px 0 20px;
-    }
-
-    footer a {
-      color: #0a3bda;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
+    footer a{color:var(--brand-blue);font-weight:bold;text-decoration:none;}
+    footer a:hover{text-decoration:underline;}
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="index.html" class="brand">TutorWise</a>
-    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">&#9776;</button>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Facebook</a>
-    </div>
+  <!-- NAVIGATION -->
+  <nav class="tw-nav">
+    <button class="tw-menu-toggle" id="tw-toggle" aria-label="Open menu">☰</button>
+    <ul class="tw-links" id="tw-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.596 0 0 .597 0 1.333v21.334C0 23.403.596 24 1.325 24h11.495v-9.294H9.691V11.09h3.129V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.098 2.794.142v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.765v2.317h3.587l-.467 3.616h-3.12V24h6.116C23.404 24 24 23.403 24 22.667V1.333C24 .597 23.404 0 22.675 0z"/></svg>
+          <span>Facebook</span>
+        </a>
+      </li>
+    </ul>
   </nav>
 
-  <!-- Header -->
+  <!-- HEADER -->
   <header>
     <h1>TutorWise</h1>
     <p>Empowering Students, One Lesson at a Time</p>
   </header>
 
-  <!-- Main Section -->
+  <!-- WELCOME -->
   <section>
     <h2>Welcome to TutorWise</h2>
     <p>
@@ -216,12 +229,28 @@
     </p>
   </section>
 
-  <!-- Contact Section on Home Page -->
+  <!-- INFO LIST -->
+  <section>
+    <h2>Why Choose Us</h2>
+    <ul class="info-list">
+      <li>Curriculum Based Teaching</li>
+      <li>Enhance Learning Skills</li>
+      <li>Dedicated Support for IEP & ESL Students</li>
+      <li>Earn High School Credits</li>
+      <li>Preparation For IB and Gifted Program</li>
+      <li>One-On-One Tutoring</li>
+      <li>Homework Help and EQAO Preparation</li>
+      <li>Improve Literacy and Numeracy Skills</li>
+      <li>Excel Towards University Success</li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
   <section id="contact-home">
     <h2>Get in Touch</h2>
-
     <div style="line-height: 2; font-size: 1.1rem; margin-bottom: 30px;">
       📍 Address: 14 Automatic Rd, Brampton, ON L6S 5N5<br />
+      📍 Intersection: Airport Rd &amp; Williams Pkwy<br />
       📞 Phone: <a href="tel:6476778767">647-677-8767</a><br />
       📧 Email: <a href="mailto:tutoringnim@gmail.com">tutoringnim@gmail.com</a><br />
       <a href="tel:6476778767" class="call-button">📞 Call Now</a>
@@ -236,18 +265,24 @@
       <input type="submit" value="Send Message" />
     </form>
 
-    <!-- Embedded Google Map -->
+    <!-- Embedded Map -->
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.6741571532863!2d-79.72066482336832!3d43.73143324814386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b14fc47c888b3%3A0xb617bd4eb88cf4e!2s14%20Automatic%20Rd%2C%20Brampton%2C%20ON%20L6S%205N5!5e0!3m2!1sen!2sca!4v1720546547681!5m2!1sen!2sca"
       allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
     </iframe>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     &copy; 2025 TutorWise. All rights reserved.<br />
     <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Facebook</a>
   </footer>
 
+  <!-- Nav Script -->
+  <script>
+    const twToggle=document.getElementById('tw-toggle');
+    const twLinks=document.getElementById('tw-links');
+    twToggle.addEventListener('click',()=>twLinks.classList.toggle('active'));
+  </script>
 </body>
 </html>
