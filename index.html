@@ -8,7 +8,7 @@
   <meta name="keywords" content="brampton tutoring, tutorwise, tutoring near me, online tutoring, math tutor, science tutor, K-12 help, ESL tutoring" />
   <meta name="author" content="TutorWise" />
 
-  <!-- Favicon -->
+  <!-- Larger Favicon -->
   <link rel="icon" href="logo.png" type="image/png" sizes="64x64">
 
   <!-- Fonts -->
@@ -31,13 +31,19 @@
       .tw-links a{color:#fff;background:transparent;padding:12px 14px;border-radius:10px;}
       .tw-links a:hover{background:rgba(255,255,255,.12);transform:scale(1.05);}
     }
-    header{padding:40px 20px;}
-    .header-content{display:flex;align-items:center;justify-content:center;gap:30px;flex-wrap:wrap;}
-    .text-block{text-align:center;max-width:500px;}
-    .text-block p{margin:10px 0;}
-    .free-eval{font-size:1.4rem;font-weight:700;color:var(--brand-blue);}
-    .brand-wrap img:first-child{max-height:150px;height:auto;} /* tutorwise_wording.png */
-    .brand-wrap img:last-child{max-height:180px;height:auto;} /* round logo bigger */
+    header{text-align:center;padding:40px 20px;}
+    .brand-wrap{display:flex;justify-content:center;align-items:center;gap:10px;margin-bottom:10px;}
+    /* Bigger wording, bigger logo, closer together */
+    .brand-wrap img:first-child {
+      max-height: 150px; /* tutorwise_wording.png */
+      height: auto;
+    }
+    .brand-wrap img:last-child {
+      max-height: 120px; /* round logo */
+      height: auto;
+    }
+    header p{font-size:1.3rem;margin-top:10px;}
+    .free-eval{font-size:1.4rem;font-weight:700;color:var(--brand-blue);margin-top:8px;}
     section{background:white;padding:40px 50px;border-radius:8px;margin:40px 0;box-shadow:0 0 10px rgba(0,0,0,0.05);}
     section h2{color:var(--brand-blue);margin-bottom:20px;font-size:2rem;}
     section p{font-size:1.1rem;line-height:1.6;}
@@ -74,18 +80,12 @@
 
   <!-- HEADER -->
   <header>
-    <div class="header-content">
-      <div class="text-block">
-        <div class="brand-wrap">
-          <img src="images/tutorwise_wording.png" alt="TutorWise Wording">
-        </div>
-        <p>Empowering Students, One Lesson at a Time</p>
-        <p class="free-eval">⭐ Call Today For a FREE Evaluation!</p>
-      </div>
-      <div class="brand-wrap">
-        <img src="images/logo.png" alt="Logo">
-      </div>
+    <div class="brand-wrap">
+      <img src="images/tutorwise_wording.png" alt="TutorWise Wording" class="site-logo">
+      <img src="images/logo.png" alt="Logo" class="site-logo">
     </div>
+    <p>Empowering Students, One Lesson at a Time</p>
+    <p class="free-eval">⭐ Call Today For a FREE Evaluation!</p>
   </header>
 
   <!-- WELCOME -->
