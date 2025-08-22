@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TutorWise | About Us</title>
-  <meta name="description" content="Learn about TutorWise — a Brampton family-founded tutoring service providing personalized K–12 support, IEP/ESL assistance, and exam prep." />
-  <meta name="keywords" content="about tutorwise, brampton tutoring, tutorwise history, personalized learning" />
+  <meta name="description" content="Learn how TutorWise grew from a local home-based center into one of Brampton's trusted names in tutoring — and why families trust us for results." />
+  <meta name="keywords" content="about tutorwise, brampton tutoring, tutorwise history, personalized learning, diviya tutoring" />
   <meta name="author" content="TutorWise" />
 
   <!-- Favicon -->
@@ -15,32 +15,177 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
 
   <style>
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:'Quicksand', sans-serif;background:#f5bd5f;color:#333;max-width:1000px;margin:auto;}
-    :root{--brand-yellow:#f5bd5f;--brand-blue:#0a3bda;}
-    .tw-nav{background:#fff;border-radius:12px;padding:10px 16px;display:flex;justify-content:center;align-items:center;position:relative;margin:12px auto 0;max-width:1000px;}
-    .tw-links{list-style:none;display:flex;gap:14px;margin:0;padding:0;font-weight:700;flex-wrap:wrap;}
-    .tw-links a{color:var(--brand-blue);text-decoration:none;padding:8px 12px;border-radius:10px;display:inline-flex;align-items:center;gap:6px;transition:transform .15s ease, background .15s ease;}
-    .tw-links a:hover{transform:scale(1.08);background:rgba(10,59,218,.10);}
-    .tw-links a svg{width:18px;height:18px;fill:currentColor;}
-    .tw-menu-toggle{display:none;position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:26px;border:none;background:var(--brand-blue);color:#fff;border-radius:8px;padding:6px 10px;cursor:pointer;}
-    @media(max-width:768px){
-      .tw-menu-toggle{display:block;}
-      .tw-links{display:none;position:absolute;left:0;right:0;top:100%;background:var(--brand-blue);border-radius:12px;flex-direction:column;padding:10px;margin-top:8px;z-index:50;}
-      .tw-links.active{display:flex;}
-      .tw-links a{color:#fff;background:transparent;padding:12px 14px;border-radius:10px;}
-      .tw-links a:hover{background:rgba(255,255,255,.12);transform:scale(1.05);}
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: #f5bd5f;
+      color: #333;
+      max-width: 1000px;
+      margin: auto;
     }
-    header{text-align:center;padding:40px 20px;}
-    .brand-wrap{display:flex;justify-content:center;align-items:center;gap:12px;margin-bottom:10px;}
-    .brand-wrap img{height:70px;}
-    header p{font-size:1.2rem;margin-top:5px;}
-    section{background:white;padding:40px 50px;border-radius:8px;margin:40px 0;box-shadow:0 0 10px rgba(0,0,0,0.05);}
-    section h2{color:var(--brand-blue);margin-bottom:20px;font-size:2rem;}
-    section p{font-size:1.1rem;line-height:1.6;margin-bottom:18px;}
-    footer{text-align:center;color:#333;font-size:0.9rem;margin:40px 0 20px;}
-    footer a{color:var(--brand-blue);font-weight:bold;text-decoration:none;}
-    footer a:hover{text-decoration:underline;}
+    :root {
+      --brand-yellow: #f5bd5f;
+      --brand-blue: #0a3bda;
+    }
+
+    .tw-nav {
+      background: #fff;
+      border-radius: 12px;
+      padding: 10px 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin: 12px auto 0;
+      max-width: 1000px;
+    }
+    .tw-links {
+      list-style: none;
+      display: flex;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      font-weight: 700;
+      flex-wrap: wrap;
+    }
+    .tw-links a {
+      color: var(--brand-blue);
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform .15s ease, background .15s ease;
+    }
+    .tw-links a:hover {
+      transform: scale(1.08);
+      background: rgba(10, 59, 218, 0.10);
+    }
+    .tw-links a svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+    .tw-menu-toggle {
+      display: none;
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 26px;
+      border: none;
+      background: var(--brand-blue);
+      color: #fff;
+      border-radius: 8px;
+      padding: 6px 10px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .tw-menu-toggle { display: block; }
+      .tw-links {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background: var(--brand-blue);
+        border-radius: 12px;
+        flex-direction: column;
+        padding: 10px;
+        margin-top: 8px;
+        z-index: 50;
+      }
+      .tw-links.active { display: flex; }
+      .tw-links a {
+        color: #fff;
+        background: transparent;
+        padding: 12px 14px;
+        border-radius: 10px;
+      }
+      .tw-links a:hover {
+        background: rgba(255, 255, 255, .12);
+        transform: scale(1.05);
+      }
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .brand-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .brand-wrap img:first-child {
+      max-height: 150px;
+      height: auto;
+    }
+    .brand-wrap img:last-child {
+      max-height: 120px;
+      height: auto;
+    }
+    header p {
+      font-size: 1.3rem;
+      margin-top: 10px;
+    }
+
+    section {
+      background: white;
+      padding: 40px 50px;
+      border-radius: 8px;
+      margin: 40px 0;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    section h2 {
+      color: var(--brand-blue);
+      margin-bottom: 20px;
+      font-size: 2.2rem;
+    }
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+    .cta-buttons a {
+      background-color: var(--brand-blue);
+      color: #fff;
+      padding: 14px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .cta-buttons a:hover {
+      background-color: #072c9e;
+    }
+
+    footer {
+      text-align: center;
+      color: #333;
+      font-size: 0.9rem;
+      margin: 40px 0 20px;
+    }
+    footer a {
+      color: var(--brand-blue);
+      font-weight: bold;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -51,6 +196,7 @@
     <ul class="tw-links" id="tw-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li>
@@ -65,27 +211,33 @@
   <!-- HEADER -->
   <header>
     <div class="brand-wrap">
-      <img src="images/tutorwise_wording.png" alt="TutorWise Wording" class="site-logo">
-      <img src="images/logo.png" alt="Logo" class="site-logo">
+      <img src="images/tutorwise_wording.png" alt="TutorWise Wording">
+      <img src="images/logo.png" alt="TutorWise Logo">
     </div>
-    <p>About TutorWise</p>
+    <p>Empowering Brampton Students Since 2006</p>
   </header>
 
   <!-- ABOUT SECTION -->
   <section>
     <h2>Our Story</h2>
     <p>
-      TutorWise was founded as a family business by a dedicated teacher who wanted to give students the support they deserved. 
-      Today, it’s proudly led by her son, continuing the same mission of growth, results, and personalized attention.
+      TutorWise began in 2006 as a home-based tutoring center known as <strong>Diviya Tutoring</strong>. Our roots were built on a deep love for education and a commitment to supporting the local community. Over the years, we’ve proudly supported hundreds of families in Brampton, helping students from all backgrounds reach their full academic potential.
     </p>
     <p>
-      At TutorWise, we believe every student learns differently. That’s why our focus is on tailored support, helping students build 
-      confidence while achieving academic success.
+      As our community grew, so did we — evolving into <strong>TutorWise</strong> and moving to our dedicated location on Automatic Road. What started with living room whiteboards and dining room desks has become a trusted education hub, known for a warm, personal, and results-driven approach to learning.
     </p>
     <p>
-      Our mission is simple: to provide a learning environment that fosters curiosity, understanding, and measurable progress. 
-      Our vision is to help each student discover their full potential while making education enjoyable and meaningful.
+      Families who’ve been with us remember our holiday parties, fun summer camps, and lasting bonds. These aren’t just tutoring sessions — they’re stepping stones in a student’s journey. From IEP learners to high achievers, we treat every student as an individual.
     </p>
+    <p>
+      At TutorWise, we believe in the power of a strong education. We know that academic results speak louder than words — and we’re proud to say our students consistently show growth, improved grades, and new confidence in themselves.
+    </p>
+  </section>
+
+  <!-- CTA BUTTONS -->
+  <section class="cta-buttons">
+    <a href="testimonials.html">🌟 Read Testimonials</a>
+    <a href="contact.html">📞 Contact Us</a>
   </section>
 
   <!-- FOOTER -->
@@ -95,9 +247,9 @@
   </footer>
 
   <script>
-    const twToggle=document.getElementById('tw-toggle');
-    const twLinks=document.getElementById('tw-links');
-    twToggle.addEventListener('click',()=>twLinks.classList.toggle('active'));
+    const twToggle = document.getElementById('tw-toggle');
+    const twLinks = document.getElementById('tw-links');
+    twToggle.addEventListener('click', () => twLinks.classList.toggle('active'));
   </script>
 </body>
 </html>
