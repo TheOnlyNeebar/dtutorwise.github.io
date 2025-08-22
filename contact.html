@@ -32,9 +32,17 @@
       .tw-links a:hover{background:rgba(255,255,255,.12);transform:scale(1.05);}
     }
     header{text-align:center;padding:40px 20px;}
-    .brand-wrap{display:flex;justify-content:center;align-items:center;gap:12px;margin-bottom:10px;}
-    .brand-wrap img{height:70px;}
-    header p{font-size:1.2rem;margin-top:5px;}
+    .brand-wrap{display:flex;justify-content:center;align-items:center;gap:10px;margin-bottom:10px;}
+    /* Match index/about/services sizes */
+    .brand-wrap img:first-child {
+      max-height: 150px; /* tutorwise_wording.png */
+      height: auto;
+    }
+    .brand-wrap img:last-child {
+      max-height: 120px; /* round logo */
+      height: auto;
+    }
+    header p{font-size:1.3rem;margin-top:10px;}
     section{background:white;padding:40px 50px;border-radius:8px;margin:40px 0;box-shadow:0 0 10px rgba(0,0,0,0.05);}
     section h2{color:var(--brand-blue);margin-bottom:20px;font-size:2rem;}
     section p{font-size:1.1rem;line-height:1.6;}
@@ -59,6 +67,7 @@
     <ul class="tw-links" id="tw-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li> <!-- Added -->
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li>
@@ -84,10 +93,10 @@
     <h2>Contact Us</h2>
     <div class="contact-info">
       📍 Address: 14 Automatic Rd, Brampton, ON L6S 5N5<br />
-      📍 Intersection: Airport Rd &amp; Williams Pkwy<br />
-      📞 Phone: <a href="tel:6476778767">647-677-8767</a><br />
+      ⭐ Intersection: Airport Rd &amp; Williams Pkwy<br />
+      📞 Phone: <a href="tel:4166190043">416-619-0043</a><br />
       📧 Email: <a href="mailto:tutoringnim@gmail.com">tutoringnim@gmail.com</a><br />
-      <a href="tel:6476778767" class="call-button">📞 Call Now</a>
+      <a href="tel:4166190043" class="call-button">📞 Call Now</a>
     </div>
 
     <form action="https://formspree.io/f/myzjqqle" method="POST">
