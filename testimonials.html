@@ -2,45 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TutorWise | Testimonials</title>
-  <meta name="description" content="Read testimonials from happy students and parents who have worked with TutorWise in Brampton." />
-  <link rel="icon" href="logo.png" type="image/png" sizes="64x64">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:'Quicksand', sans-serif;background:#f5bd5f;color:#333;max-width:1000px;margin:auto;}
-    :root{--brand-yellow:#f5bd5f;--brand-blue:#0a3bda;}
-    .tw-nav{background:#fff;border-radius:12px;padding:10px 16px;display:flex;justify-content:center;align-items:center;position:relative;margin:12px auto 0;max-width:1000px;}
-    .tw-links{list-style:none;display:flex;gap:14px;margin:0;padding:0;font-weight:700;flex-wrap:wrap;}
-    .tw-links a{color:var(--brand-blue);text-decoration:none;padding:8px 12px;border-radius:10px;display:inline-flex;align-items:center;gap:6px;transition:transform .15s ease, background .15s ease;}
-    .tw-links a:hover{transform:scale(1.08);background:rgba(10,59,218,.10);}
-    .tw-links a svg{width:18px;height:18px;fill:currentColor;}
-    .tw-menu-toggle{display:none;position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:26px;border:none;background:var(--brand-blue);color:#fff;border-radius:8px;padding:6px 10px;cursor:pointer;}
-    @media(max-width:768px){
-      .tw-menu-toggle{display:block;}
-      .tw-links{display:none;position:absolute;left:0;right:0;top:100%;background:var(--brand-blue);border-radius:12px;flex-direction:column;padding:10px;margin-top:8px;z-index:50;}
-      .tw-links.active{display:flex;}
-      .tw-links a{color:#fff;background:transparent;padding:12px 14px;border-radius:10px;}
-      .tw-links a:hover{background:rgba(255,255,255,.12);transform:scale(1.05);}
-    }
-    header{text-align:center;padding:40px 20px;}
-    .brand-wrap{display:flex;justify-content:center;align-items:center;gap:10px;margin-bottom:10px;}
-    .brand-wrap img:first-child { max-height:150px; height:auto; }
-    .brand-wrap img:last-child { max-height:120px; height:auto; }
-    header p{font-size:1.3rem;margin-top:10px;}
-    section{background:white;padding:40px 50px;border-radius:8px;margin:40px 0;box-shadow:0 0 10px rgba(0,0,0,0.05);}
-    section h2{color:var(--brand-blue);margin-bottom:20px;font-size:2rem;}
-    section p{font-size:1.1rem;line-height:1.6;}
-    .testimonial{border-left:4px solid var(--brand-blue);padding:15px 20px;margin-bottom:20px;background:#fdfdfd;border-radius:6px;}
-    .testimonial p{font-style:italic;}
-    .testimonial .author{font-weight:700;color:var(--brand-blue);margin-top:8px;}
-    footer{text-align:center;color:#333;font-size:0.9rem;margin:40px 0 20px;}
-    footer a{color:var(--brand-blue);font-weight:bold;text-decoration:none;}
-    footer a:hover{text-decoration:underline;}
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Testimonials | TutorWise</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" type="image/png" href="images/favicon.png"/>
 </head>
 <body>
+  <!-- HEADER -->
+  <header class="tw-header">
+    <img src="images/logo.png" alt="TutorWise Logo" class="tw-logo"/>
+    <img src="images/tutorwise_wording.png" alt="TutorWise Wordmark" class="tw-wordmark"/>
+  </header>
 
   <!-- NAVIGATION -->
   <nav class="tw-nav">
@@ -48,9 +20,56 @@
     <ul class="tw-links" id="tw-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="testimonials.html" class="active">Testimonials</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li>
         <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">
-          <svg viewBox="0 0 24 24"><path
+          <svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.596 0 0 .597 0 1.333v21.334C0 23.403.596 24 1.325 24h11.495v-9.294H9.691V11.09h3.129V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.098 2.794.142v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.765v2.317h3.587l-.467 3.616h-3.12V24h6.116C23.404 24 24 23.403 24 22.667V1.333C24 .597 23.404 0 22.675 0z"/></svg>
+          <span>Facebook</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- INTRO SECTION -->
+  <section class="tw-intro">
+    <h1>What Families Say About TutorWise</h1>
+    <p>
+      At TutorWise, we’re committed to helping students build confidence, develop strong study habits, 
+      and achieve real academic growth. But don’t just take our word for it—see what parents and students 
+      have to say about their experiences with us.
+    </p>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="tw-testimonials">
+    <div class="testimonial">
+      <p>“TutorWise completely transformed my son’s attitude toward math. He went from struggling and frustrated to confident and eager to learn.”</p>
+      <h4>— Sarah L., Parent</h4>
+    </div>
+
+    <div class="testimonial">
+      <p>“The tutors take time to understand each student’s needs. My daughter’s reading comprehension improved in just a few weeks.”</p>
+      <h4>— David R., Parent</h4>
+    </div>
+
+    <div class="testimonial">
+      <p>“What I love most is that they focus not just on grades but on building skills that last. Highly recommend!”</p>
+      <h4>— Aisha M., Parent</h4>
+    </div>
+
+    <div class="testimonial">
+      <p>“I actually look forward to tutoring now. The lessons are fun, and I finally feel like I can keep up at school.”</p>
+      <h4>— Ethan, Grade 7 Student</h4>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="tw-footer">
+    <p>&copy; 2025 TutorWise. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
