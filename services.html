@@ -108,6 +108,14 @@
         background: rgba(255, 255, 255, .12);
         transform: scale(1.05);
       }
+      /* Hide round logo on mobile, keep wording */
+      .brand-wrap img:last-child {
+        display: none;
+      }
+      .brand-wrap img:first-child {
+        max-width: 90%;
+        height: auto;
+      }
     }
 
     header {
@@ -217,7 +225,7 @@
     <ul class="tw-links" id="tw-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="testimonials.html">Testimonials</a></li> <!-- ✅ Added -->
+      <li><a href="testimonials.html">Testimonials</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li>
