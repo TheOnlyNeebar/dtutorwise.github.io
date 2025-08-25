@@ -31,29 +31,53 @@
       .tw-links a{color:#fff;background:transparent;padding:12px 14px;border-radius:10px;}
       .tw-links a:hover{background:rgba(255,255,255,.12);transform:scale(1.05);}
     }
+
     header{text-align:center;padding:40px 20px;}
-    .brand-wrap{display:flex;justify-content:center;align-items:center;gap:10px;margin-bottom:10px;}
-    /* Bigger wording, bigger logo, closer together */
+    .brand-wrap {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:10px;
+      margin-bottom:10px;
+      flex-wrap:wrap; /* allows logo + wording to stack on smaller screens */
+    }
+    .brand-wrap img {
+      height:auto;
+      max-width:100%;
+    }
     .brand-wrap img:first-child {
-      max-height: 150px; /* tutorwise_wording.png */
-      height: auto;
+      max-height: 150px; /* wording */
     }
     .brand-wrap img:last-child {
       max-height: 120px; /* round logo */
-      height: auto;
     }
+    /* On smaller screens, shrink logos so they don’t cut off */
+    @media(max-width:600px){
+      .brand-wrap img:first-child {
+        max-height: 90px;
+      }
+      .brand-wrap img:last-child {
+        max-height: 70px;
+      }
+    }
+
     header p{font-size:1.3rem;margin-top:10px;}
     .free-eval{font-size:1.4rem;font-weight:700;color:var(--brand-blue);margin-top:8px;}
+
     section{background:white;padding:40px 50px;border-radius:8px;margin:40px 0;box-shadow:0 0 10px rgba(0,0,0,0.05);}
     section h2{color:var(--brand-blue);margin-bottom:20px;font-size:2rem;}
     section p{font-size:1.1rem;line-height:1.6;}
     .info-list{list-style:disc inside;font-size:1.1rem;line-height:1.8;color:#333;}
+
     .call-button{display:inline-block;margin-top:15px;background-color:var(--brand-blue);color:#fff;padding:12px 20px;border-radius:8px;font-weight:bold;text-decoration:none;transition:background-color .3s ease;}
     .call-button:hover{background-color:#072c9e;}
+
     input,textarea{padding:10px;font-size:1rem;border:1px solid #ccc;border-radius:6px;font-family:'Quicksand', sans-serif;}
     input[type="submit"]{background-color:var(--brand-blue);color:#fff;font-weight:bold;cursor:pointer;border:none;transition:background-color .3s ease;}
     input[type="submit"]:hover{background-color:#072c9e;}
+
     iframe{border:0;width:100%;height:300px;margin-top:30px;border-radius:8px;}
+
     footer{text-align:center;color:#333;font-size:0.9rem;margin:40px 0 20px;}
     footer a{color:var(--brand-blue);font-weight:bold;text-decoration:none;}
     footer a:hover{text-decoration:underline;}
@@ -62,22 +86,22 @@
 <body>
 
   <!-- NAVIGATION -->
-<nav class="tw-nav">
-  <button class="tw-menu-toggle" id="tw-toggle" aria-label="Open menu">☰</button>
-  <ul class="tw-links" id="tw-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="testimonials.html">Testimonials</a></li> <!-- Added -->
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li>
-      <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">
-        <svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.596 0 0 .597 0 1.333v21.334C0 23.403.596 24 1.325 24h11.495v-9.294H9.691V11.09h3.129V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.098 2.794.142v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.765v2.317h3.587l-.467 3.616h-3.12V24h6.116C23.404 24 24 23.403 24 22.667V1.333C24 .597 23.404 0 22.675 0z"/></svg>
-        <span>Facebook</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+  <nav class="tw-nav">
+    <button class="tw-menu-toggle" id="tw-toggle" aria-label="Open menu">☰</button>
+    <ul class="tw-links" id="tw-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.596 0 0 .597 0 1.333v21.334C0 23.403.596 24 1.325 24h11.495v-9.294H9.691V11.09h3.129V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.098 2.794.142v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.765v2.317h3.587l-.467 3.616h-3.12V24h6.116C23.404 24 24 23.403 24 22.667V1.333C24 .597 23.404 0 22.675 0z"/></svg>
+          <span>Facebook</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
   
   <!-- HEADER -->
   <header>
