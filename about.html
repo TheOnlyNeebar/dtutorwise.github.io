@@ -9,7 +9,7 @@
   <meta name="author" content="TutorWise" />
 
   <!-- Favicon -->
-  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="icon" href="logo.png" type="image/png" sizes="64x64">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
@@ -28,6 +28,7 @@
       --brand-blue: #0a3bda;
     }
 
+    /* NAVIGATION */
     .tw-nav {
       background: #fff;
       border-radius: 12px;
@@ -110,6 +111,7 @@
       }
     }
 
+    /* HEADER */
     header {
       text-align: center;
       padding: 40px 20px;
@@ -121,19 +123,14 @@
       gap: 10px;
       margin-bottom: 10px;
     }
-    .brand-wrap img:first-child {
-      max-height: 150px;
-      height: auto;
-    }
-    .brand-wrap img:last-child {
-      max-height: 120px;
-      height: auto;
-    }
+    .brand-wrap img:first-child { max-height: 150px; }
+    .brand-wrap img:last-child { max-height: 120px; }
     header p {
       font-size: 1.3rem;
       margin-top: 10px;
     }
 
+    /* SECTIONS */
     section {
       background: white;
       padding: 40px 50px;
@@ -152,6 +149,7 @@
       margin-bottom: 20px;
     }
 
+    /* CTA BUTTONS */
     .cta-buttons {
       display: flex;
       justify-content: center;
@@ -172,6 +170,7 @@
       background-color: #072c9e;
     }
 
+    /* FOOTER */
     footer {
       text-align: center;
       color: #333;
@@ -197,7 +196,7 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="testimonials.html">Testimonials</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html" class="active">About</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li>
         <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">
